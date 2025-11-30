@@ -12,21 +12,21 @@ function Menubar() {
             <Container >
                 <div className='flex justify-between  capitalize'>
                     <div className='flex gap-10 font-primary font-semibold text-[16px]'>
-                        <a href="#">home</a>
-                        <div className='flex items-center cursor-pointer'>
-                            <a href="#">shop</a>
-                            <MdOutlineKeyboardArrowDown className='text-[25px]  pt-1 text-gray-600' />
+                        <a href="#" className='hover:text-red-btn duration-300'>home</a>
+                        <div className='flex items-center cursor-pointer group'>
+                            <a href="#" className='group-hover:text-red-btn duration-300'>shop</a>
+                            <MdOutlineKeyboardArrowDown className='text-[25px] pt-1 text-gray-600 group-hover:text-red-btn duration-300' />
                         </div>
-                        <div className='flex items-center cursor-pointer'>
-                            <a href="#">page</a>
-                            <MdOutlineKeyboardArrowDown className='text-[25px]  pt-1 text-gray-600' />
+                        <div className='flex items-center cursor-pointer group'>
+                            <a href="#" className='group-hover:text-red-btn duration-300'>page</a>
+                            <MdOutlineKeyboardArrowDown className='text-[25px]  pt-1 text-gray-600 group-hover:text-red-btn duration-300' />
                         </div>
-                        <div className='flex items-center cursor-pointer'>
-                            <a href="#">blog</a>
-                            <MdOutlineKeyboardArrowDown className='text-[25px]  pt-1 text-gray-600' />
+                        <div className='flex items-center cursor-pointer group'>
+                            <a href="#" className=' group-hover:text-red-btn duration-300'>blog</a>
+                            <MdOutlineKeyboardArrowDown className='text-[25px] pt-1 text-gray-600 group-hover:text-red-btn duration-300' />
                         </div>
-                        <a href="#">about</a>
-                        <a href="#">contact</a>
+                        <a href="#" className='hover:text-red-btn duration-300'>about</a>
+                        <a href="#" className='hover:text-red-btn duration-300'>contact</a>
                     </div>
                     <div className='flex gap-5'>
                         <div className='flex items-center gap-2'>

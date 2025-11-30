@@ -10,11 +10,11 @@ function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className=' h-screen overflow-y-scroll scrollbar-thin scrollbar-thumb-button scrollbar-track-gray-100'>
       <Navbar></Navbar>
       <Menubar></Menubar>
       <Banner></Banner>
-    </>
+    </div>
   )
 }
 

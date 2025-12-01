@@ -19,13 +19,13 @@ function Banner() {
             <img src={banner_element_02} alt="banner_element_02" className='absolute left-72 top-12' />
             <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12' />
             <div className='absolute right-[50px] top-[200px] z-30'>
-                <img src={banner_element_05} alt="banner_element_05"/>
+                <img src={banner_element_05} alt="banner_element_05" />
                 <p className='absolute top-[50px] right-[55px] font-heading text-[64px] text-center font-bold text-white capitalize leading-[55px]'>50% <span className='text-[40px] block'>off</span></p>
             </div>
             <img src={banner_element_06} alt="banner_element_06" className='absolute right-[60px] bottom-[280px] z-30' />
             <img src={banner_element_07} alt="banner_element_07" className='absolute left-[650px] bottom-0 z-30' />
-            <img src={banner_img_bg_01} alt="banner_img_bg_01" className='absolute right-[150px] top-[50px]'/>
-            <img src={banner_img_01} alt="banner_img_bg_01" className='absolute right-[100px] top-[110px]'/>
+            <img src={banner_img_bg_01} alt="banner_img_bg_01" className='absolute right-[150px] top-[50px]' />
+            <img src={banner_img_01} alt="banner_img_bg_01" className='absolute right-[100px] top-[110px]' />
             <Container>
                 <div className='flex'>
                     <div>

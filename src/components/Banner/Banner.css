@@ -1,0 +1,9 @@
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active.carousel-item-left,
+.carousel-fade .carousel-item.active.carousel-item-right {
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+

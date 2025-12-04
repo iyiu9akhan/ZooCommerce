@@ -24,7 +24,10 @@ function Banner() {
     return (
 
         <div>
-            <Carousel slideInterval={5000}>
+            <Carousel slideInterval={5000}
+                leftControl="&nbsp;"
+                rightControl="&nbsp;"
+            >
                 <div className='bg-banner-one relative py-[200px] overflow-hidden'>
                     <img src={banner_element_01} alt="banner_element_01" className='absolute -left-30 -top-13 z-0 ' />
                     <img src={banner_element_02} alt="banner_element_02" className='absolute left-72 top-12' />

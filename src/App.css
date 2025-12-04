@@ -24,3 +24,6 @@ p{
 .carousel-control-next {
   display: none !important;
 }
+.overflow-x-scroll{
+  overflow-x: hidden;
+}

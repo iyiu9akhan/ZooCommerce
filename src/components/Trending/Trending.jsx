@@ -1,11 +1,12 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
 import trending_icon from '../../assets/trending/trending_icon.png'
 import { Carousel } from "flowbite-react";
 import trending_img_01 from "../../assets/trending/trending_img_01.jpg"
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaCartArrowDown } from "react-icons/fa";
+import Container from '../Container/Container';
+// import './App.css'
 
 function Trending() {
     const filterButtons = [

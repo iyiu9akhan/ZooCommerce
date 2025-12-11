@@ -14,6 +14,7 @@
 
   --color-button: #0a4253;
   --color-red-btn: #d32300;
+  --color-orange-btn: #F05A28;
   --color-banner-one: #e2eecd;
   --color-banner-two: #F8E6C3;
   --color-banner-three: #F2E4E1;
@@ -23,8 +24,14 @@
   --color-offerBG_two: #F2E0FF;
   --color-offerBG_three: #DFF5FA;
 
-  --color-categoriesBG_one : #CDE4AF;
-  --color-categoriesBG_two : #FCC0BB;
+  --color-categoriesBG_dog : #CDE4AF;
+  --color-categoriesBG_fish : #FCC0BB;
+  --color-categoriesBG_cat : #A9EDFC;
+  --color-categoriesBG_bird : #F9DF8A;
+  --color-categoriesBG_smallPet : #F8CCFB;
+  --color-categoriesBG_rabbit : #ACD2FD;
+  --color-categoriesBG_reptile : #FFC2A0;
+  --color-categoriesBG_turtle : #C3FFE3;
 }
 
 @theme inline {

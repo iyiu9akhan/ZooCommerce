@@ -32,6 +32,7 @@
   --color-categoriesBG_rabbit : #ACD2FD;
   --color-categoriesBG_reptile : #FFC2A0;
   --color-categoriesBG_turtle : #C3FFE3;
+  --color-categoriesCounterBG: #5DCB94;
 }
 
 @theme inline {

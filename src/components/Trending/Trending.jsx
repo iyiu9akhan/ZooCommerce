@@ -44,7 +44,7 @@ function Trending() {
                             </div>
                         </div>
                     </div>
-                    <div >
+                    <div>
                         <Carousel
                             plugins={[
                                 Autoplay({

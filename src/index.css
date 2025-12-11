@@ -18,6 +18,10 @@
   --color-banner-two: #F8E6C3;
   --color-banner-three: #F2E4E1;
   --color-heading: #222222;
+
+  --color-offerBG_one: #FFE5D6;
+  --color-offerBG_two: #F2E0FF;
+  --color-offerBG_three: #DFF5FA;
 }
 
 @theme inline {

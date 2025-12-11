@@ -1,6 +1,5 @@
 import React from 'react'
 import Container from '../Container/Container'
-// import banner_element_01 from "../../../assets/banner/banner_element_01.png"
 import banner_element_01 from "../../assets/banner/banner_element_01.png"
 import banner_element_02 from "../../assets/banner/banner_element_02.png"
 import banner_element_03 from "../../assets/banner/banner_element_03.png"
@@ -15,20 +14,39 @@ import banner_img_bg_01 from "../../assets/banner/banner_img_bg_01.png"
 import banner_img_bg_02 from "../../assets/banner/banner_img_bg_02.png"
 import banner_img_bg_03 from "../../assets/banner/banner_img_bg_03.png"
 import { BsArrowRightSquareFill } from "react-icons/bs";
-// import Carousel from 'react-bootstrap/Carousel';
 import "../Banner/Banner.css";
 import { Carousel } from "flowbite-react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import { MdArrowLeft } from "react-icons/md";
+import { MdOutlineArrowRight } from "react-icons/md";
 
 function Banner() {
+
+    const CustomLeftControl = () => (
+        <div className="hover:bg-button hover:text-white duration-300 text-button rounded-[10px] cursor-pointer p-1 border border-button/50 hover:border hover:border-button/50">
+            <MdArrowLeft className='text-[40px]' />
+        </div>
+    );
+    const CustomRightControl = () => (
+        <div className="hover:bg-button hover:text-white duration-300 text-button rounded-[10px] cursor-pointer p-1 border border-button/50 hover:border hover:border-button/50">
+            <MdOutlineArrowRight className='text-[40px]' />
+        </div>
+    )
+
     return (
 
         <div>
             <Carousel slideInterval={5000}
-                leftControl="&nbsp;"
-                rightControl="&nbsp;"
+                // leftControl="&nbsp;"
+                // rightControl="&nbsp;"
+                leftControl={<CustomLeftControl />}
+                rightControl={<CustomRightControl />}
+                //  leftControl={<div />}
+                // rightControl={<div />}
+
+                indicators={false}
             >
-                <div className='bg-banner-one relative py-[200px] overflow-hidden'>
+                <div className='bg-banner-one relative py-[200px] overflow-hidden cursor-auto'>
+                    {/* {CustomGroupedControls} */}
                     <img src={banner_element_01} alt="banner_element_01" className='absolute -left-30 -top-13 z-0 ' />
                     <img src={banner_element_02} alt="banner_element_02" className='absolute left-72 top-12' />
                     <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12' />
@@ -60,7 +78,7 @@ function Banner() {
                     </Container>
                 </div>
 
-                <div className='bg-banner-three relative py-[200px] overflow-hidden'>
+                <div className='bg-banner-three relative py-[200px] overflow-hidden cursor-auto'>
                     <img src={banner_element_01} alt="banner_element_01" className='absolute -left-30 -top-13 z-0' />
                     <img src={banner_element_02} alt="banner_element_02" className='absolute left-72 top-12' />
                     <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12' />
@@ -92,7 +110,7 @@ function Banner() {
                     </Container>
                 </div>
 
-                <div className='bg-banner-two relative py-[200px] overflow-hidden'>
+                <div className='bg-banner-two relative py-[200px] overflow-hidden cursor-auto'>
                     <img src={banner_element_01} alt="banner_element_01" className='absolute -left-30 -top-13 z-0' />
                     <img src={banner_element_02} alt="banner_element_02" className='absolute left-72 top-12' />
                     <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12' />
@@ -125,9 +143,6 @@ function Banner() {
                 </div>
             </Carousel>
         </div>
-
-
-
     )
 }
 

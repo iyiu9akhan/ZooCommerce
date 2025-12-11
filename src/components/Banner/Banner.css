@@ -1,4 +1,6 @@
 .overflow-x-scroll{
   overflow-x: hidden;
 }
-
+.rounded-lg{
+  border-radius: 0;
+}

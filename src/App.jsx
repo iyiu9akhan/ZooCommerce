@@ -6,16 +6,20 @@ import Menubar from './components/Menubar/Menubar'
 import Navbar from './components/Navbar/Navbar'
 import './App.css'
 import Trending from './components/Trending/Trending'
+import Offer from './components/Offer/Offer'
+import Categories from './components/Categories/Categories'
 
 function App() {
   // const [count, setCount] = useState(0)
-  
+
   return (
     <div className=' h-screen overflow-y-scroll scrollbar-thin scrollbar-thumb-button scrollbar-track-gray-100'>
       <Navbar></Navbar>
       <Menubar></Menubar>
       <Banner></Banner>
+      <Categories></Categories>
       <Trending></Trending>
+      <Offer></Offer>
     </div>
   )
 }

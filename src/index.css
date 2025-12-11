@@ -22,6 +22,9 @@
   --color-offerBG_one: #FFE5D6;
   --color-offerBG_two: #F2E0FF;
   --color-offerBG_three: #DFF5FA;
+
+  --color-categoriesBG_one : #CDE4AF;
+  --color-categoriesBG_two : #FCC0BB;
 }
 
 @theme inline {

@@ -79,7 +79,7 @@ function Trending() {
                                                     })}
 
                                                     <p className='ml-2 text-gray-500 text-[13px] font-medium'>
-                                                        ({product.reviews} reviews)
+                                                        ({product.rating} reviews)
                                                     </p>
                                                 </div>
                                                 <p className='font-heading font-semibold capitalize text-[16px] mb-2 cursor-pointer truncate'>

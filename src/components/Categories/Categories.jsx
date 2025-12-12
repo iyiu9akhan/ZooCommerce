@@ -16,12 +16,14 @@ import { IoArrowRedoSharp } from "react-icons/io5";
 import Countdown from 'react-countdown';
 import categories_shape_01 from "../../assets/categories/categories_shape_01.png"
 import categories_shape_02 from "../../assets/categories/categories_shape_02.png"
+import categories_shape_03 from "../../assets/categories/categories_shape_03.png"
+import categories_shape_04 from "../../assets/categories/categories_shape_04.png"
 
 function Categories() {
 
     // const targetDate = Date.now() + 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
     const targetDate = localStorage.getItem('countdownEnd') || (() => {
-        const date = Date.now() + 30 * 24 * 60 * 60;
+        const date = Date.now() + 30 * 24 * 60 * 60 * 1000;
         localStorage.setItem('countdownEnd', date);
     })();
 
@@ -84,12 +86,12 @@ function Categories() {
                                 <p className='font-subHeading capitalize text-orange-btn tracking-widest text-[27px] text-center mt-4'><span className='text-black text-[30px]'>"</span>your next obsession starts here<span className='text-black text-[30px]'>"</span></p>
                             </Carousel> */}
 
-                            <p className='text-[50px] capitalize font-heading font-bold text-white text-center leading-13 mt-10 mb-5'>something new just landed</p>
-                            <p className='mb-5 text-white font-bold font-primary text-[20px]'>Hurry up ! Deal end in :</p>
+                            <p className='text-[50px] capitalize font-heading font-bold text-white text-center leading-13 mt-10 mb-5 select-none'>something new just landed</p>
+                            <p className='mb-5 text-white font-bold font-primary text-[20px] select-none'>Hurry up ! Claim your deal</p>
                             <Countdown
                                 date={parseInt(targetDate)}
                                 renderer={({ days, hours, minutes, seconds }) => (
-                                    <div className='flex font-heading text-white font-bold text-[25px] text-center gap-3'>
+                                    <div className='flex font-heading text-white font-bold text-[25px] text-center gap-3 select-none'>
                                         <div>
                                             <p className='w-[55px] h-[55px] bg-button rounded-[15px] flex items-center justify-center -mb-[7px]'>{days}</p>
                                             <span className='text-[14px]'>Days</span>
@@ -111,6 +113,8 @@ function Categories() {
                             />
                             <img src={categories_shape_01} alt="categories_shape_01" className='absolute opacity-30 -bottom-8' />
                             <img src={categories_shape_02} alt="categories_shape_02" className='absolute bottom-2 h-50 w-60 left-35' />
+                            <img src={categories_shape_03} alt="categories_shape_03" className='absolute  bottom-35 left-5' />
+                            <img src={categories_shape_04} alt="categories_shape_04" className='absolute top-40 right-5' />
                         </div>
                     </div>
                 </div>

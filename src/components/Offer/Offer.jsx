@@ -72,7 +72,7 @@ function Offer() {
                         ))}
                     </div>
                 </div>
-                <div className='flex justify-between gap-5 mb-[50px]'>
+                <div className='flex justify-between gap-5 mb-20'>
                     {offerBottomData.map((offer_bottom) => (
                         <div>
                             <img src={offer_bottom.img} alt="offerBottom_img" className='rounded-[20px]'/>

@@ -132,7 +132,7 @@ function ImgProduct() {
                         </div>
                     </div>
                 </div>
-                <div className='absolute z-30 right-[245px] bottom-[150px] w-10 h-10 flex items-center justify-center group animate-bounce'>
+                <div className='absolute z-50 right-[245px] bottom-[150px] w-10 h-10 flex items-center justify-center group animate-bounce'>
                     <span className="absolute inset-0 animate-ping rounded-full bg-white opacity-90"></span>
                     <span className="relative inline-flex   w-4 h-4 rounded-full bg-white group-hover:w-5 group-hover:h-5 duration-300 group-hover:bg-orange-btn"></span>
                     <div className='absolute -top-80 -right-22  scale-0 group-hover:scale-100 duration-300 origin-bottom'>

@@ -38,6 +38,7 @@ function ImgProduct() {
 
             <div className='absolute right-0 top-0 z-10'>
                 <img src={imgProduct_bg} alt="imgProduct_bg" />
+                
                 <div className='absolute z-30 right-[610px] top-[510px] w-10 h-10 flex items-center justify-center group animate-bounce'>
                     <span className="absolute inset-0 animate-ping rounded-full bg-white opacity-90"></span>
                     <span className="relative inline-flex w-4 h-4 rounded-full bg-white group-hover:w-5 group-hover:h-5 duration-300 group-hover:bg-orange-btn"></span>
@@ -85,6 +86,7 @@ function ImgProduct() {
                         </div>
                     </div>
                 </div>
+
                 <div className='absolute z-30 right-[400px] top-[540px] w-10 h-10 flex items-center justify-center group animate-bounce'>
                     <span className="absolute inset-0 animate-ping rounded-full bg-white opacity-90"></span>
                     <span className="relative inline-flex   w-4 h-4 rounded-full bg-white group-hover:w-5 group-hover:h-5 duration-300 group-hover:bg-orange-btn"></span>
@@ -132,6 +134,7 @@ function ImgProduct() {
                         </div>
                     </div>
                 </div>
+
                 <div className='absolute z-50 right-[245px] bottom-[150px] w-10 h-10 flex items-center justify-center group animate-bounce'>
                     <span className="absolute inset-0 animate-ping rounded-full bg-white opacity-90"></span>
                     <span className="relative inline-flex   w-4 h-4 rounded-full bg-white group-hover:w-5 group-hover:h-5 duration-300 group-hover:bg-orange-btn"></span>
@@ -179,6 +182,7 @@ function ImgProduct() {
                         </div>
                     </div>
                 </div>
+
                 <div className='absolute z-30 right-[140px] bottom-[430px] w-10 h-10 flex items-center justify-center group animate-bounce'>
                     <span className="absolute inset-0 animate-ping rounded-full bg-white opacity-90"></span>
                     <span className="relative inline-flex   w-4 h-4 rounded-full bg-white group-hover:w-5 group-hover:h-5 duration-300 group-hover:bg-orange-btn"></span>
@@ -226,6 +230,7 @@ function ImgProduct() {
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <svg viewBox='0 0 1920 46' className='absolute -bottom-6 fill-white rotate-180 z-999'>

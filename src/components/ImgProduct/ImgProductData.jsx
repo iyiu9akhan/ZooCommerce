@@ -1,10 +1,10 @@
 import trending_img_01 from "../../assets/trending/trending_img_01.jpg"
-import trending_img_02 from "../../assets/trending/trending_img_02.jpg"
+// import trending_img_02 from "../../assets/trending/trending_img_02.jpg"
 import trending_img_03 from "../../assets/trending/trending_img_03.jpg"
-import trending_img_04 from "../../assets/trending/trending_img_04.jpg"
-import trending_img_05 from "../../assets/trending/trending_img_05.jpg"
+// import trending_img_04 from "../../assets/trending/trending_img_04.jpg"
+// import trending_img_05 from "../../assets/trending/trending_img_05.jpg"
 import trending_img_06 from "../../assets/trending/trending_img_06.jpg"
-import trending_img_07 from "../../assets/trending/trending_img_07.jpg"
+// import trending_img_07 from "../../assets/trending/trending_img_07.jpg"
 import trending_img_08 from "../../assets/trending/trending_img_08.jpg"
 
 

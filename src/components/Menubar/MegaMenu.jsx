@@ -1,9 +1,9 @@
 "use client"
 
 import * as React from "react"
-// ❌ REMOVED: import Link from "next/link" 
-// ❌ REMOVED: // import {Link} from "../../components/ui/navigation-menu" 
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
+import { PiPawPrintFill } from "react-icons/pi";
+
 
 import {
     NavigationMenu,
@@ -21,55 +21,140 @@ import { IoLogoYoutube } from "react-icons/io"
 import { FaSquarePhone } from "react-icons/fa6"
 
 // Components data
-const components = [
+const petShopData = [
     {
-        title: "Alert Dialog",
-        href: "/docs/primitives/alert-dialog",
-        description:
-            "A modal dialog that interrupts the user with important content and expects a response.",
+        category: "cat",
+        subcategories: [
+            { name: "Dry Food", href: "/dog/food" },
+            { name: "Chew Toys", href: "/dog/toys" },
+            { name: "Beds & Crates", href: "/dog/beds" },
+            { name: "Harnesses", href: "/dog/walking" },
+        ]
     },
     {
-        title: "Hover Card",
-        href: "/docs/primitives/hover-card",
-        description:
-            "For sighted users to preview content available behind a link.",
+        category: "turtle",
+        subcategories: [
+            { name: "Cat Litter", href: "/cat/litter" },
+            { name: "Scratching", href: "/cat/trees" },
+            { name: "Wet Food", href: "/cat/food" },
+            { name: "Interactive", href: "/cat/toys" },
+        ]
     },
     {
-        title: "Progress",
-        href: "/docs/primitives/progress",
-        description:
-            "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+        category: "rabbit",
+        subcategories: [
+            { name: "Cages & Stands", href: "/bird/cages" },
+            { name: "Seed Mixes", href: "/bird/food" },
+            { name: "Bird Toys", href: "/bird/toys" },
+            { name: "Health & Care", href: "/bird/health" },
+        ]
     },
     {
-        title: "Scroll-area",
-        href: "/docs/primitives/scroll-area",
-        description: "Visually or semantically separates content.",
+        category: "fish",
+        subcategories: [
+            { name: "Hamster", href: "/small/cages" },
+            { name: "Rabbit Hay", href: "/small/food" },
+            { name: "Grooming Kits", href: "/small/grooming" },
+            { name: "Exercise Wheels", href: "/small/toys" },
+        ]
     },
     {
-        title: "Tabs",
-        href: "/docs/primitives/tabs",
-        description:
-            "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+        category: "bird",
+        subcategories: [
+            { name: "Rabbit Hay", href: "/small/food" },
+            { name: "Grooming Kits", href: "/small/grooming" },
+            { name: "Exercise Wheels", href: "/small/toys" },
+            { name: "Hamster", href: "/small/cages" },
+        ]
     },
     {
-        title: "Tooltip",
-        href: "/docs/primitives/tooltip",
-        description:
-            "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+        category: "reptile",
+        subcategories: [
+            { name: "Hamster", href: "/small/cages" },
+            { name: "Grooming Kits", href: "/small/grooming" },
+            { name: "Rabbit Hay", href: "/small/food" },
+            { name: "Exercise Wheels", href: "/small/toys" },
+        ]
     },
-]
+    {
+        category: "dog",
+        subcategories: [
+            { name: "Exercise Wheels", href: "/small/toys" },
+            { name: "Hamster", href: "/small/cages" },
+            { name: "Rabbit Hay", href: "/small/food" },
+            { name: "Grooming Kits", href: "/small/grooming" },
+        ]
+    },
+    {
+        category: "samll pet",
+        subcategories: [
+            { name: "Rabbit Hay", href: "/small/food" },
+            { name: "Hamster", href: "/small/cages" },
+            { name: "Grooming Kits", href: "/small/grooming" },
+            { name: "Exercise Wheels", href: "/small/toys" },
+        ]
+    }
+];
 
 function NavigationMenuDemo() {
     return (
         <>
             <Container>
                 <div className="flex justify-between">
-                    <NavigationMenu>
-                        <NavigationMenuList className="flex-wrap">
+                    <NavigationMenu >
+                        <NavigationMenuList className="flex-wrap gap-5">
 
-                            {/* Home Menu */}
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+                            <NavigationMenuItem className={'px-4'}>
+                                <a className="font-primary font-bold capitalize text-md cursor-pointer hover:text-red-btn duration-200 ease-in-out">home</a>
+                                {/* <NavigationMenuContent>
+                                    <ul className="grid w-[200px] gap-4 p-4">
+                                        <li className="flex flex-col space-y-2">
+                                            <NavigationMenuLink asChild>
+                                                <a href="#">Components</a>
+                                            </NavigationMenuLink>
+                                            <NavigationMenuLink asChild>
+                                                <a href="#">Documentation</a>
+                                            </NavigationMenuLink>
+                                            <NavigationMenuLink asChild>
+                                                <a href="#">Blocks</a>
+                                            </NavigationMenuLink>
+                                        </li>
+                                    </ul>
+                                </NavigationMenuContent> */}
+                            </NavigationMenuItem>
+
+                            <NavigationMenuItem className={'px-4 '}>
+                                <NavigationMenuTrigger className="font-primary font-bold capitalize text-md cursor-pointer ">shop</NavigationMenuTrigger>
+                                <NavigationMenuContent className={"w-full"}>
+                                    <ul className="grid grid-cols-4 gap-5 p-5 justify-between w-screen max-w-[1320px]">
+                                        {petShopData.map((item) => (
+                                            <li key={item.category} className="flex flex-col">
+                                                <span className="font-bold text-red-btn text-sm uppercase mb-2">{item.category}</span>
+                                                {item.subcategories.map((sub) => (
+                                                    <NavigationMenuLink key={sub.name} asChild>
+                                                        <a
+                                                            href={sub.href}
+                                                            // 1. Added "group" class here
+                                                            className="group font-heading text-[16px] text-gray-800 hover:text-red-btn transition-colors duration-200 block py-1"
+                                                        >
+                                                            <div className="flex gap-3 items-center">
+                                                                <PiPawPrintFill
+                                                                    // 2. Used "group-hover:text-red-btn" 
+                                                                    className="size-4 text-gray-500 transition-colors duration-200 group-hover:text-red-btn"
+                                                                />
+                                                                <span>{sub.name}</span>
+                                                            </div>
+                                                        </a>
+                                                    </NavigationMenuLink>
+                                                ))}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </NavigationMenuContent>
+                            </NavigationMenuItem>
+
+                            <NavigationMenuItem className={'px-4'}>
+                                <NavigationMenuTrigger className="font-primary font-bold capitalize text-md cursor-pointer">blog</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] p-4">
                                         <li className="row-span-3">
@@ -100,74 +185,9 @@ function NavigationMenuDemo() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
 
-                            {/* Components Menu */}
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px] p-4">
-                                        {components.map((component) => (
-                                            <ListItem
-                                                key={component.title}
-                                                title={component.title}
-                                                href={component.href}
-                                            >
-                                                {component.description}
-                                            </ListItem>
-                                        ))}
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-
-                            {/* Docs Link (Not a dropdown) */}
-                            <NavigationMenuItem>
-                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                    <a href="/docs">Docs</a>
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-
-                            {/* List Menu (Hidden on mobile) */}
-                            <NavigationMenuItem className="hidden md:block">
-                                <NavigationMenuTrigger>List</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[300px] gap-4 p-4">
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <a href="#">
-                                                    <div className="font-medium">Components</div>
-                                                    <div className="text-muted-foreground">
-                                                        Browse all components in the library.
-                                                    </div>
-                                                </a>
-                                            </NavigationMenuLink>
-                                        </li>
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <a href="#">
-                                                    <div className="font-medium">Documentation</div>
-                                                    <div className="text-muted-foreground">
-                                                        Learn how to use the library.
-                                                    </div>
-                                                </a>
-                                            </NavigationMenuLink>
-                                        </li>
-                                        <li>
-                                            <NavigationMenuLink asChild>
-                                                <a href="#">
-                                                    <div className="font-medium">Blog</div>
-                                                    <div className="text-muted-foreground">
-                                                        Read our latest blog posts.
-                                                    </div>
-                                                </a>
-                                            </NavigationMenuLink>
-                                        </li>
-                                    </ul>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem>
-
-                            {/* Simple Menu (Hidden on mobile) */}
-                            <NavigationMenuItem className="hidden md:block">
-                                <NavigationMenuTrigger>Simple</NavigationMenuTrigger>
-                                <NavigationMenuContent>
+                            <NavigationMenuItem className={'px-4'}>
+                                <a className="font-primary font-bold capitalize text-md cursor-pointer hover:text-red-btn duration-200 ease-in-out">about</a>
+                                {/* <NavigationMenuContent>
                                     <ul className="grid w-[200px] gap-4 p-4">
                                         <li className="flex flex-col space-y-2">
                                             <NavigationMenuLink asChild>
@@ -181,14 +201,13 @@ function NavigationMenuDemo() {
                                             </NavigationMenuLink>
                                         </li>
                                     </ul>
-                                </NavigationMenuContent>
+                                </NavigationMenuContent> */}
                             </NavigationMenuItem>
 
-                            {/* With Icon Menu (Hidden on mobile) */}
-                            <NavigationMenuItem className="hidden md:block">
-                                <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid w-[200px] gap-4 p-4">
+                            <NavigationMenuItem className={'px-4'}>
+                                <a className="font-primary font-bold capitalize text-md cursor-pointer hover:text-red-btn duration-200 ease-in-out">contact</a>
+                                {/* <NavigationMenuContent className="bg-red-500">
+                                    <ul className="grid w-[200px] gap-4 p-4 ">
                                         <li className="flex flex-col space-y-2">
                                             <NavigationMenuLink asChild>
                                                 <a href="#" className="flex items-center gap-2 hover:bg-accent p-2 rounded-md">
@@ -210,11 +229,12 @@ function NavigationMenuDemo() {
                                             </NavigationMenuLink>
                                         </li>
                                     </ul>
-                                </NavigationMenuContent>
+                                </NavigationMenuContent> */}
                             </NavigationMenuItem>
 
                         </NavigationMenuList>
                     </NavigationMenu>
+
                     <div className='flex gap-5'>
                         <div className='flex items-center gap-2'>
                             <FaSquarePhone className='text-[22px] text-red-btn' />

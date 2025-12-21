@@ -21,7 +21,7 @@ import categoriesSlider_nine from "../../assets/categories/categoriesSlider_nine
 const categoriesData = [
     {
         img: cat_icon,
-        title: "dog",
+        title: "cat",
         item: "3",
         bg_color: "bg-categoriesBG_cat"
     },

@@ -8,9 +8,9 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 function Menubar() {
     return (
-        <div className='z-30 relative bg-white py-3'>
+        <div className='z-30 relative bg-white py-5'>
             <Container >
-                <div className='flex justify-between  capitalize'>
+                <div className='flex justify-between items-center capitalize py-10'>
                     <div className='flex gap-10 font-primary font-semibold text-[16px]'>
                         <a href="#" className='hover:text-red-btn! duration-300 text-black'>home</a>
                         <div className='flex items-center cursor-pointer group'>

@@ -21,82 +21,130 @@ import { FaSquarePhone } from "react-icons/fa6"
 
 const petShopData = [
     {
-        category: "cat",
+        category: "dog",
         subcategories: [
-            { name: "dry food", href: "/" },
-            { name: "wet food", href: "/" },
-            { name: "health", href: "/" },
-            { name: "beds", href: "/" },
-            { name: "treats", href: "/" },
-            { name: "toys", href: "/" },
-            { name: "harnesses", href: "/" },
-            { name: "collars", href: "/" },
-        ]
+            { name: "dry food", href: "/dog/dry-food" },
+            { name: "wet food", href: "/dog/wet-food" },
+            { name: "treats", href: "/dog/treats" },
+            { name: "toys", href: "/dog/toys" },
+            { name: "beds", href: "/dog/beds" },
+            { name: "collars", href: "/dog/collars" },
+            { name: "harnesses", href: "/dog/harnesses" },
+            { name: "health", href: "/dog/health" },
+        ],
+        bg_color: "bg-categoriesBG_dog"
+
     },
     {
-        category: "turtle",
+        category: "cat",
         subcategories: [
-            { name: "Cat Litter", href: "/cat/litter" },
-            { name: "Scratching", href: "/cat/trees" },
-            { name: "Wet Food", href: "/cat/food" },
-            { name: "Interactive", href: "/cat/toys" },
-        ]
+            { name: "dry food", href: "/cat/dry-food" },
+            { name: "wet food", href: "/cat/wet-food" },
+            { name: "litter", href: "/cat/litter" },
+            { name: "toys", href: "/cat/toys" },
+            { name: "beds", href: "/cat/beds" },
+            { name: "treats", href: "/cat/treats" },
+            { name: "harnesses", href: "/cat/harnesses" },
+            { name: "collars", href: "/cat/collars" },
+        ],
+        bg_color: "bg-categoriesBG_cat"
     },
     {
         category: "rabbit",
         subcategories: [
-            { name: "Cages & Stands", href: "/bird/cages" },
-            { name: "Seed Mixes", href: "/bird/food" },
-            { name: "Bird Toys", href: "/bird/toys" },
-            { name: "Health & Care", href: "/bird/health" },
-        ]
-    },
-    {
-        category: "fish",
-        subcategories: [
-            { name: "Hamster", href: "/small/cages" },
-            { name: "Rabbit Hay", href: "/small/food" },
-            { name: "Grooming Kits", href: "/small/grooming" },
-            { name: "Exercise Wheels", href: "/small/toys" },
-        ]
+            { name: "hay & forage", href: "/rabbit/hay" },
+            { name: "pellets", href: "/rabbit/pellets" },
+            { name: "hutches", href: "/rabbit/hutches" },
+            { name: "toys", href: "/rabbit/toys" },
+            { name: "bedding", href: "/rabbit/bedding" },
+            { name: "grooming", href: "/rabbit/grooming" },
+            { name: "health", href: "/rabbit/health" },
+            { name: "bowls", href: "/rabbit/bowls" },
+        ],
+        bg_color: "bg-categoriesBG_rabbit"
     },
     {
         category: "bird",
         subcategories: [
-            { name: "Rabbit Hay", href: "/small/food" },
-            { name: "Grooming Kits", href: "/small/grooming" },
-            { name: "Exercise Wheels", href: "/small/toys" },
-            { name: "Hamster", href: "/small/cages" },
-        ]
+            { name: "seeds", href: "/bird/seeds" },
+            { name: "pellets", href: "/bird/pellets" },
+            { name: "cages", href: "/bird/cages" },
+            { name: "toys", href: "/bird/toys" },
+            { name: "perches", href: "/bird/perches" },
+            { name: "treats", href: "/bird/treats" },
+            { name: "health", href: "/bird/health" },
+            { name: "carriers", href: "/bird/carriers" },
+        ],
+        bg_color: "bg-categoriesBG_bird"
+    },
+    {
+        category: "turtle",
+        subcategories: [
+            { name: "food", href: "/turtle/food" },
+            { name: "aquariums", href: "/turtle/aquariums" },
+            { name: "lighting", href: "/turtle/lighting" },
+            { name: "heating", href: "/turtle/heating" },
+            { name: "filters", href: "/turtle/filters" },
+            { name: "platforms", href: "/turtle/platforms" },
+            { name: "water care", href: "/turtle/water-care" },
+            { name: "decor", href: "/turtle/decor" },
+        ],
+        bg_color: "bg-categoriesBG_turtle"
     },
     {
         category: "reptile",
         subcategories: [
-            { name: "Hamster", href: "/small/cages" },
-            { name: "Grooming Kits", href: "/small/grooming" },
-            { name: "Rabbit Hay", href: "/small/food" },
-            { name: "Exercise Wheels", href: "/small/toys" },
-        ]
+            { name: "live food", href: "/reptile/live-food" },
+            { name: "terrariums", href: "/reptile/terrariums" },
+            { name: "bedding", href: "/reptile/bedding" },
+            { name: "heating", href: "/reptile/heating" },
+            { name: "lighting", href: "/reptile/lighting" },
+            { name: "hides", href: "/reptile/hides" },
+            { name: "decor", href: "/reptile/decor" },
+            { name: "health", href: "/reptile/health" },
+        ],
+        bg_color: "bg-categoriesBG_reptile"
     },
     {
-        category: "dog",
+        category: "small pet",
         subcategories: [
-            { name: "Exercise Wheels", href: "/small/toys" },
-            { name: "Hamster", href: "/small/cages" },
-            { name: "Rabbit Hay", href: "/small/food" },
-            { name: "Grooming Kits", href: "/small/grooming" },
-        ]
+            { name: "food", href: "/small-pet/food" },
+            { name: "cages", href: "/small-pet/cages" },
+            { name: "bedding", href: "/small-pet/bedding" },
+            { name: "wheels", href: "/small-pet/wheels" },
+            { name: "toys", href: "/small-pet/toys" },
+            { name: "hideouts", href: "/small-pet/hideouts" },
+            { name: "grooming", href: "/small-pet/grooming" },
+            { name: "health", href: "/small-pet/health" },
+        ],
+        bg_color: "bg-categoriesBG_smallPet"
     },
     {
-        category: "samll pet",
+        category: "fish",
         subcategories: [
-            { name: "Rabbit Hay", href: "/small/food" },
-            { name: "Hamster", href: "/small/cages" },
-            { name: "Grooming Kits", href: "/small/grooming" },
-            { name: "Exercise Wheels", href: "/small/toys" },
-        ]
+            { name: "flakes", href: "/fish/flakes" },
+            { name: "pellets", href: "/fish/pellets" },
+            { name: "tanks", href: "/fish/tanks" },
+            { name: "filters", href: "/fish/filters" },
+            { name: "pumps", href: "/fish/pumps" },
+            { name: "lighting", href: "/fish/lighting" },
+            { name: "decor", href: "/fish/decor" },
+            { name: "conditioner", href: "/fish/conditioner" },
+        ],
+        bg_color: "bg-categoriesBG_fish"
     }
 ];
+
+// const hoverColorMap = {
+//     "dog": "hover:bg-categoriesBG_dog",
+//     "cat": "hover:bg-categoriesBG_cat",
+//     "rabbit": "hover:bg-categoriesBG_rabbit",
+//     "bird": "hover:bg-categoriesBG_bird",
+//     "turtle": "hover:bg-categoriesBG_turtle",
+//     "reptile": "hover:bg-categoriesBG_reptile",
+//     "small pet": "hover:bg-categoriesBG_smallPet",
+//     "fish": "hover:bg-categoriesBG_fish",
+// };
 
 function NavigationMenuDemo() {
     return (
@@ -128,25 +176,27 @@ function NavigationMenuDemo() {
                             <NavigationMenuItem className={'px-4 '}>
                                 <NavigationMenuTrigger className="font-primary font-bold capitalize text-md cursor-pointer ">shop</NavigationMenuTrigger>
                                 <NavigationMenuContent className={"w-full"}>
-                                    <ul className="grid grid-cols-4 gap-5 p-5 justify-between w-screen max-w-[1320px]">
+                                    <ul className="grid grid-cols-4 gap-2 p-2 justify-between w-screen max-w-[1320px]">
                                         {petShopData.map((item) => (
-                                            <li key={item.category} className="flex flex-col">
-                                                <span className="font-bold text-red-btn text-sm uppercase mb-2">{item.category}</span>
-                                                {item.subcategories.map((sub) => (
-                                                    <NavigationMenuLink key={sub.name} asChild>
-                                                        <a
-                                                            href={sub.href}
-                                                            className="group font-heading text-[16px] text-gray-800 hover:text-red-btn transition-colors duration-200 block py-1"
-                                                        >
-                                                            <div className="flex gap-3 items-center">
-                                                                <PiPawPrintFill
-                                                                    className="size-4 text-gray-500 transition-colors duration-200 group-hover:text-red-btn"
-                                                                />
-                                                                <span className="capitalize font-medium">{sub.name}</span>
-                                                            </div>
-                                                        </a>
-                                                    </NavigationMenuLink>
-                                                ))}
+                                            <li key={item.category} className={` flex flex-col  rounded-[5px] p-2`}>
+                                                <span className={`font-bold text-black text-lg font-primary uppercase pl-2 ${item.bg_color} rounded-[5px]`}>{item.category}</span>
+                                                <div className="grid grid-cols-2 mt-3">
+                                                    {item.subcategories.map((sub) => (
+                                                        <NavigationMenuLink key={sub.name} asChild>
+                                                            <a
+                                                                href={sub.href}
+                                                                className="group font-heading text-[16px] text-gray-800 hover:text-red-btn transition-colors duration-200 block py-1"
+                                                            >
+                                                                <div className={`flex gap-3 items-center `}>
+                                                                    <PiPawPrintFill
+                                                                        className="size-4 text-gray-700 transition-colors duration-200 group-hover:text-red-btn"
+                                                                    />
+                                                                    <span className="capitalize font-medium text-gray-800 group-hover:text-red-btn">{sub.name}</span>
+                                                                </div>
+                                                            </a>
+                                                        </NavigationMenuLink>
+                                                    ))}
+                                                </div>
                                             </li>
                                         ))}
                                     </ul>
@@ -163,8 +213,8 @@ function NavigationMenuDemo() {
                                                     className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-4 no-underline outline-hidden transition-all duration-200 select-none focus:shadow-md md:p-6"
                                                     href="/"
                                                 >
-                                                    <div className="mb-2 text-lg font-medium sm:mt-4">
-                                                        shadcn/ui
+                                                    <div className="capitalize mb-2 text-lg font-medium sm:mt-4">
+                                                        your cat
                                                     </div>
                                                     <p className="text-muted-foreground text-sm leading-tight">
                                                         Beautifully designed components built with Tailwind CSS.

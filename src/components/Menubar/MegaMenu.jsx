@@ -4,7 +4,6 @@ import * as React from "react"
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
 import { PiPawPrintFill } from "react-icons/pi";
 
-
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -20,15 +19,18 @@ import { BiLogoInstagramAlt } from "react-icons/bi"
 import { IoLogoYoutube } from "react-icons/io"
 import { FaSquarePhone } from "react-icons/fa6"
 
-// Components data
 const petShopData = [
     {
         category: "cat",
         subcategories: [
-            { name: "Dry Food", href: "/dog/food" },
-            { name: "Chew Toys", href: "/dog/toys" },
-            { name: "Beds & Crates", href: "/dog/beds" },
-            { name: "Harnesses", href: "/dog/walking" },
+            { name: "dry food", href: "/" },
+            { name: "wet food", href: "/" },
+            { name: "health", href: "/" },
+            { name: "beds", href: "/" },
+            { name: "treats", href: "/" },
+            { name: "toys", href: "/" },
+            { name: "harnesses", href: "/" },
+            { name: "collars", href: "/" },
         ]
     },
     {
@@ -134,15 +136,13 @@ function NavigationMenuDemo() {
                                                     <NavigationMenuLink key={sub.name} asChild>
                                                         <a
                                                             href={sub.href}
-                                                            // 1. Added "group" class here
                                                             className="group font-heading text-[16px] text-gray-800 hover:text-red-btn transition-colors duration-200 block py-1"
                                                         >
                                                             <div className="flex gap-3 items-center">
                                                                 <PiPawPrintFill
-                                                                    // 2. Used "group-hover:text-red-btn" 
                                                                     className="size-4 text-gray-500 transition-colors duration-200 group-hover:text-red-btn"
                                                                 />
-                                                                <span>{sub.name}</span>
+                                                                <span className="capitalize font-medium">{sub.name}</span>
                                                             </div>
                                                         </a>
                                                     </NavigationMenuLink>

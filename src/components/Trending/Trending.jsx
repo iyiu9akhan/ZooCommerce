@@ -1,5 +1,5 @@
 import React from 'react'
-import trending_icon from '../../assets/trending/trending_icon.png'
+// import trending_icon from '../../assets/trending/trending_icon.png'
 import { FaStar, FaStarHalfAlt, FaRegStar, FaCartArrowDown } from "react-icons/fa";
 import Container from '../Container/Container';
 import {
@@ -11,6 +11,7 @@ import {
 } from "../ui/carousel"
 import Autoplay from "embla-carousel-autoplay";
 import trendingProducts from '../Trending/TrendingData'
+import { IoPawSharp } from "react-icons/io5";
 
 function Trending() {
     const filterButtons = [
@@ -26,7 +27,8 @@ function Trending() {
                 <div>
                     <div className='flex justify-between items-center mb-10'>
                         <div className='flex gap-3 items-center'>
-                            <img src={trending_icon} alt="trending_icon" className='h-[45px] w-[45px]' />
+                            {/* <img src={trending_icon} alt="trending_icon" className='h-[45px] w-[45px]' /> */}
+                            <IoPawSharp className='text-red-btn text-[50px]' />
                             <p className='font-heading text-[36px] capitalize font-bold'>trending this week</p>
                         </div>
                         <div>

@@ -32,7 +32,7 @@ const petShopData = [
             { name: "harnesses", href: "/dog/harnesses" },
             { name: "health", href: "/dog/health" },
         ],
-        bg_color: "bg-categoriesBG_dog"
+        // bg_color: "bg-categoriesBG_dog"
 
     },
     {
@@ -47,7 +47,7 @@ const petShopData = [
             { name: "harnesses", href: "/cat/harnesses" },
             { name: "collars", href: "/cat/collars" },
         ],
-        bg_color: "bg-categoriesBG_cat"
+        // bg_color: "bg-categoriesBG_cat"
     },
     {
         category: "rabbit",
@@ -61,7 +61,7 @@ const petShopData = [
             { name: "health", href: "/rabbit/health" },
             { name: "bowls", href: "/rabbit/bowls" },
         ],
-        bg_color: "bg-categoriesBG_rabbit"
+        // bg_color: "bg-categoriesBG_rabbit"
     },
     {
         category: "bird",
@@ -75,7 +75,7 @@ const petShopData = [
             { name: "health", href: "/bird/health" },
             { name: "carriers", href: "/bird/carriers" },
         ],
-        bg_color: "bg-categoriesBG_bird"
+        // bg_color: "bg-categoriesBG_bird"
     },
     {
         category: "turtle",
@@ -89,7 +89,7 @@ const petShopData = [
             { name: "water care", href: "/turtle/water-care" },
             { name: "decor", href: "/turtle/decor" },
         ],
-        bg_color: "bg-categoriesBG_turtle"
+        // bg_color: "bg-categoriesBG_turtle"
     },
     {
         category: "reptile",
@@ -103,7 +103,7 @@ const petShopData = [
             { name: "decor", href: "/reptile/decor" },
             { name: "health", href: "/reptile/health" },
         ],
-        bg_color: "bg-categoriesBG_reptile"
+        // bg_color: "bg-categoriesBG_reptile"
     },
     {
         category: "small pet",
@@ -117,7 +117,7 @@ const petShopData = [
             { name: "grooming", href: "/small-pet/grooming" },
             { name: "health", href: "/small-pet/health" },
         ],
-        bg_color: "bg-categoriesBG_smallPet"
+        // bg_color: "bg-categoriesBG_smallPet"
     },
     {
         category: "fish",
@@ -131,10 +131,30 @@ const petShopData = [
             { name: "decor", href: "/fish/decor" },
             { name: "conditioner", href: "/fish/conditioner" },
         ],
-        bg_color: "bg-categoriesBG_fish"
+        // bg_color: "bg-categoriesBG_fish"
     }
 ];
 
+// const hoverColor = {
+//     "dog": "hover:bg-categoriesBG_dog",
+//     "cat": "hover:bg-categoriesBG_cat",
+//     "rabbit": "hover:bg-categoriesBG_rabbit",
+//     "bird": "hover:bg-categoriesBG_bird",
+//     "turtle": "hover:bg-categoriesBG_turtle",
+//     "reptile": "hover:bg-categoriesBG_reptile",
+//     "small pet": "hover:bg-categoriesBG_smallPet",
+//     "fish": "hover:bg-categoriesBG_fish",
+// }; 
+const bgColor = {
+    "dog": "bg-categoriesBG_dog",
+    "cat": "bg-categoriesBG_cat",
+    "rabbit": "bg-categoriesBG_rabbit",
+    "bird": "bg-categoriesBG_bird",
+    "turtle": "bg-categoriesBG_turtle",
+    "reptile": "bg-categoriesBG_reptile",
+    "small pet": "bg-categoriesBG_smallPet",
+    "fish": "bg-categoriesBG_fish",
+};
 // const hoverColorMap = {
 //     "dog": "hover:bg-categoriesBG_dog",
 //     "cat": "hover:bg-categoriesBG_cat",
@@ -177,61 +197,103 @@ function NavigationMenuDemo() {
                                 <NavigationMenuTrigger className="font-primary font-bold capitalize text-md cursor-pointer ">shop</NavigationMenuTrigger>
                                 <NavigationMenuContent className={"w-full"}>
                                     <ul className="grid grid-cols-4 gap-2 p-2 justify-between w-screen max-w-[1320px]">
-                                        {petShopData.map((item) => (
-                                            <li key={item.category} className={` flex flex-col  rounded-[5px] p-2`}>
-                                                <span className={`font-bold text-black text-lg font-primary uppercase pl-2 ${item.bg_color} rounded-[5px]`}>{item.category}</span>
-                                                <div className="grid grid-cols-2 mt-3">
-                                                    {item.subcategories.map((sub) => (
-                                                        <NavigationMenuLink key={sub.name} asChild>
-                                                            <a
-                                                                href={sub.href}
-                                                                className="group font-heading text-[16px] text-gray-800 hover:text-red-btn transition-colors duration-200 block py-1"
-                                                            >
-                                                                <div className={`flex gap-3 items-center `}>
-                                                                    <PiPawPrintFill
-                                                                        className="size-4 text-gray-700 transition-colors duration-200 group-hover:text-red-btn"
-                                                                    />
-                                                                    <span className="capitalize font-medium text-gray-800 group-hover:text-red-btn">{sub.name}</span>
-                                                                </div>
-                                                            </a>
-                                                        </NavigationMenuLink>
-                                                    ))}
-                                                </div>
-                                            </li>
-                                        ))}
+                                        {petShopData.map((item) => {
+                                            // const hoverBg = hoverColor[item.category] || "hover:bg-gray-100";
+                                            const categoryBg = bgColor[item.category] || "hover:bg-gray-100";
+
+                                            return (
+                                                <li key={item.category} className="flex flex-col rounded-[5px] p-2">
+                                                    <span className={`font-bold text-black text-lg font-primary uppercase pl-2 ${categoryBg} rounded-[5px]`}>
+                                                        {item.category}
+                                                    </span>
+
+                                                    <div className="grid grid-cols-2 mt-3">
+                                                        {item.subcategories.map((sub) => (
+                                                            <NavigationMenuLink key={sub.name} asChild>
+                                                                <a
+                                                                    href={sub.href}
+                                                                    className=" font-heading text-[16px] text-gray-800 transition-colors duration-200 block py-1"
+                                                                >
+                                                                    <div className={`flex gap-3 items-center px-2 py-1 rounded-md transition-all duration-200 group`}>
+                                                                        <PiPawPrintFill
+                                                                            className="size-4 text-gray-700 transition-colors duration-200 group-hover:text-red-btn"
+                                                                        />
+                                                                        <span className="capitalize font-medium  text-gray-800 group-hover:text-red-btn">
+                                                                            {sub.name}
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                            </NavigationMenuLink>
+                                                        ))}
+                                                    </div>
+                                                </li>
+                                            );
+                                        })}
                                     </ul>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem className={'px-4'}>
                                 <NavigationMenuTrigger className="font-primary font-bold capitalize text-md cursor-pointer">blog</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] p-4">
-                                        <li className="row-span-3">
-                                            <NavigationMenuLink asChild>
-                                                <a
-                                                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-4 no-underline outline-hidden transition-all duration-200 select-none focus:shadow-md md:p-6"
-                                                    href="/"
-                                                >
-                                                    <div className="capitalize mb-2 text-lg font-medium sm:mt-4">
-                                                        your cat
-                                                    </div>
-                                                    <p className="text-muted-foreground text-sm leading-tight">
-                                                        Beautifully designed components built with Tailwind CSS.
-                                                    </p>
-                                                </a>
-                                            </NavigationMenuLink>
-                                        </li>
-                                        <ListItem href="/docs" title="Introduction">
-                                            Re-usable components built using Radix UI and Tailwind CSS.
-                                        </ListItem>
-                                        <ListItem href="/docs/installation" title="Installation">
-                                            How to install dependencies and structure your app.
-                                        </ListItem>
-                                        <ListItem href="/docs/primitives/typography" title="Typography">
-                                            Styles for headings, paragraphs, lists...etc
-                                        </ListItem>
-                                    </ul>
+                                <NavigationMenuContent >
+                                    <div className="flex ">
+                                        <div>
+                                            <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] p-4">
+                                                <li className="row-span-3">
+                                                    <NavigationMenuLink asChild>
+                                                        <a
+                                                            className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-4 no-underline outline-hidden transition-all duration-200 select-none focus:shadow-md md:p-6"
+                                                            href="/"
+                                                        >
+                                                            <div className="capitalize mb-2 text-lg font-medium sm:mt-4">
+                                                                your cat
+                                                            </div>
+                                                            <p className="text-muted-foreground text-sm leading-tight">
+                                                                Beautifully designed components built with Tailwind CSS.
+                                                            </p>
+                                                        </a>
+                                                    </NavigationMenuLink>
+                                                </li>
+                                                <ListItem href="/docs" title="Introduction">
+                                                    Re-usable components built using Radix UI and Tailwind CSS.
+                                                </ListItem>
+                                                <ListItem href="/docs/installation" title="Installation">
+                                                    How to install dependencies and structure your app.
+                                                </ListItem>
+                                                <ListItem href="/docs/primitives/typography" title="Typography">
+                                                    Styles for headings, paragraphs, lists...etc
+                                                </ListItem>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] p-4">
+                                                <li className="row-span-3">
+                                                    <NavigationMenuLink asChild>
+                                                        <a
+                                                            className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-4 no-underline outline-hidden transition-all duration-200 select-none focus:shadow-md md:p-6"
+                                                            href="/"
+                                                        >
+                                                            <div className="capitalize mb-2 text-lg font-medium sm:mt-4">
+                                                                your cat
+                                                            </div>
+                                                            <p className="text-muted-foreground text-sm leading-tight">
+                                                                Beautifully designed components built with Tailwind CSS.
+                                                            </p>
+                                                        </a>
+                                                    </NavigationMenuLink>
+                                                </li>
+                                                <ListItem href="/docs" title="Introduction">
+                                                    Re-usable components built using Radix UI and Tailwind CSS.
+                                                </ListItem>
+                                                <ListItem href="/docs/installation" title="Installation">
+                                                    How to install dependencies and structure your app.
+                                                </ListItem>
+                                                <ListItem href="/docs/primitives/typography" title="Typography">
+                                                    Styles for headings, paragraphs, lists...etc
+                                                </ListItem>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
 

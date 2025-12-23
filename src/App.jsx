@@ -7,6 +7,7 @@ import Offer from './components/Offer/Offer'
 import Categories from './components/Categories/Categories'
 import ImgProduct from './components/ImgProduct/ImgProduct'
 import MegaMenu from './components/Menubar/MegaMenu'
+import KittenCollections from './components/KittenCollections/KittenCollections'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Trending />
       <Offer />
       <ImgProduct />
+      <KittenCollections/>
     </div>
   )
 }

@@ -9,80 +9,74 @@ import kittenCollections_img_08 from "../../assets/kittenCollections/Plantation 
 import kittenCollections_img_09 from "../../assets/kittenCollections/Meow Mix Irresistibles Soft Wet Food fot Cats.jpg"
 
 
-export const kittenCategories = [
-    "treats",
-    "dry food",
+export const Adultcategories = [
+    "dog treats",
     "wet food",
+    "dog toys",
+    "dog beds",
     "accessories",
-    "litter",
-    "beds",
     "health",
+    "wet food",
 ];
 
-const KittenCollectionsData = [
+const AdultCollectionsData = [
     {
         id: 1,
         img: kittenCollections_img_01,
         title: "Natural Dry Cat Food",
         price: "322.50 BDT",
         rating: 2,
-        category: "dry food" 
+        category: "dog treats"
     },
     {
         id: 2,
-        img: kittenCollections_img_02,
-        title: "Dog Food Chicken & Brown Rice",
-        price: "635.00 BDT",
-        rating: 3.5,
-        category: "dry food"
-    },
-    {
-        id: 3,
         img: kittenCollections_img_03,
         title: "Dog Treats Chews",
         price: "245.00 BDT",
         rating: 4,
-        category: "treats"
+        category: "dog toys"
     },
+    {
+        id: 3,
+        img: kittenCollections_img_02,
+        title: "Dog Food Chicken & Brown Rice",
+        price: "635.00 BDT",
+        rating: 3.5,
+        category: "dog food"
+    },
+
     {
         id: 4,
         img: kittenCollections_img_04,
         title: "Cat Beds for Indoor Cats",
         price: "245.00 BDT",
         rating: 4.5,
-        category: "beds"
+        category: "dog beds"
     },
     {
         id: 5,
+        img: kittenCollections_img_07,
+        title: "Healthy Ingredient Dog Chews",
+        price: "245.00 BDT",
+        rating: 5,
+        category: "flea & ticks"
+    },
+    {
+        id: 6,
         img: kittenCollections_img_05,
         title: "Nerf Dog Toy",
         price: "245.00 BDT",
         rating: 2,
         category: "accessories"
     },
-    {
-        id: 6,
-        img: kittenCollections_img_06,
-        title: "Cozy Soft Round Dog Bed",
-        price: "245.00 BDT",
-        rating: 3,
-        category: "beds"
-    },
+
     {
         id: 7,
-        img: kittenCollections_img_07,
-        title: "Healthy Ingredient Dog Chews",
-        price: "245.00 BDT",
-        rating: 5,
-        category: "health"
-    },
-    {
-        id: 8,
         img: kittenCollections_img_08,
         title: "Plantation Round Pet Bed For Dogs",
         price: "245.00 BDT",
         rating: 5,
-        category: "beds",
+        category: "accessories",
     }, {
         id: 8,
         img: kittenCollections_img_09,
@@ -91,6 +85,22 @@ const KittenCollectionsData = [
         rating: 3.5,
         category: "wet food",
     },
+    {
+        id: 9,
+        img: kittenCollections_img_06,
+        title: "Cozy Soft Round Dog Bed",
+        price: "245.00 BDT",
+        rating: 3,
+        category: "health"
+    },
+    {
+        id: 10,
+        img: kittenCollections_img_05,
+        title: "Nerf Dog Toy",
+        price: "245.00 BDT",
+        rating: 2,
+        category: "accessories"
+    },
 ];
 
-export default KittenCollectionsData;
+export default AdultCollectionsData;

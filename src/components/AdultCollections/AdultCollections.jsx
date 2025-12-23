@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { FaStar, FaStarHalfAlt, FaRegStar, FaCartArrowDown, FaCat } from "react-icons/fa";
+import { FaStar, FaStarHalfAlt, FaRegStar, FaCartArrowDown } from "react-icons/fa";
+import { FaDog } from "react-icons/fa6";
 import { PiPawPrintFill } from "react-icons/pi";
 import { ImSearch, ImCross } from "react-icons/im";
 import Container from '../Container/Container';
@@ -11,13 +12,13 @@ import {
     CarouselPrevious,
 } from "../ui/carousel"
 import Autoplay from "embla-carousel-autoplay";
-import KittenCollectionsData, { kittenCategories } from './KittenCollectionsData';
+import AdultCollectionsData, { Adultcategories } from './AdultCollectionsData';
 
-function KittenCollections() {
+function AdultCollections() {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("all");
 
-    const filteredProducts = KittenCollectionsData.filter((product) => {
+    const filteredProducts = AdultCollectionsData.filter((product) => {
         const titleMatch = product.title.toLowerCase().includes(searchQuery.toLowerCase());
 
         const categoryMatch = selectedCategory.toLowerCase() === "all" ||
@@ -31,15 +32,15 @@ function KittenCollections() {
                 <div>
                     <div className='flex justify-between items-center mb-10 relative'>
                         <div className='flex gap-3 items-center'>
-                            <FaCat className='text-red-btn text-[40px]' />
-                            <p className='font-heading text-[36px] capitalize font-bold'>collections for kittens</p>
+                            <FaDog className='text-red-btn text-[40px]' />
+                            <p className='font-heading text-[36px] capitalize font-bold'>collections for adults</p>
                         </div>
                         <div className='flex items-center gap-2 border border-button px-3 h-[35px] rounded-[5px] w-[200px] absolute right-29 top-[19px]'>
                             <ImSearch className='text-button shrink-0' />
 
                             <input
                                 type="text"
-                                placeholder="Search for Kittens..."
+                                placeholder="Search for Adults..."
                                 className='outline-none bg-transparent w-full text-[14px] placeholder:font-primary placeholder:font-semibold font-primary font-semibold'
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -56,7 +57,7 @@ function KittenCollections() {
 
                     <div className='grid grid-cols-12 gap-5'>
                         <div className='col-span-2 border-2 border-red-btn rounded-[20px] px-6 h-[315px] flex flex-col justify-center'>
-                            {["all", ...kittenCategories].map((item, index) => (
+                            {["all", ...Adultcategories].map((item, index) => (
                                 <div
                                     key={index}
                                     onClick={() => setSelectedCategory(item)}
@@ -76,7 +77,7 @@ function KittenCollections() {
                                     key={selectedCategory}
                                     plugins={[
                                         Autoplay({
-                                            delay: 2000,
+                                            delay: 1800,
                                             stopOnMouseEnter: true,
                                             stopOnInteraction: false,
                                         }),
@@ -154,4 +155,4 @@ function KittenCollections() {
     )
 }
 
-export default KittenCollections
+export default AdultCollections

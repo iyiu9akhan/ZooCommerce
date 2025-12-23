@@ -8,6 +8,8 @@ import Categories from './components/Categories/Categories'
 import ImgProduct from './components/ImgProduct/ImgProduct'
 import MegaMenu from './components/Menubar/MegaMenu'
 import KittenCollections from './components/KittenCollections/KittenCollections'
+import AdultCollections from './components/AdultCollections/AdultCollections'
+import BrandPartners from './components/BrandPartners/BrandPartners'
 
 function App() {
 
@@ -22,6 +24,8 @@ function App() {
       <Offer />
       <ImgProduct />
       <KittenCollections/>
+      <AdultCollections/>
+      <BrandPartners/>
     </div>
   )
 }

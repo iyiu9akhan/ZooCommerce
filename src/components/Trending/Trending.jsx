@@ -42,9 +42,10 @@ function Trending() {
                                     <div
                                         key={index}
                                         onClick={() => setActiveTab(label)}
-                                        className='font-heading capitalize text-gray-600 border border-gray-400 hover:border-red-btn 
-                                      hover:bg-red-btn hover:text-white py-2 px-4 rounded-[10px] 
-                                        font-semibold duration-200 cursor-pointer'
+                                        className={`font-heading capitalize py-2 px-4 rounded-[10px] font-semibold duration-200 cursor-pointer border ${activeTab === label
+                                                ? 'bg-red-btn text-white border-red-btn'
+                                                : 'text-gray-600 border-gray-400 hover:border-red-btn hover:bg-red-btn hover:text-white' 
+                                            }`}
                                     >
                                         {label}
                                     </div>

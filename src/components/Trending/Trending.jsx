@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import trending_icon from '../../assets/trending/trending_icon.png'
 import { FaStar, FaStarHalfAlt, FaRegStar, FaCartArrowDown } from "react-icons/fa";
 import Container from '../Container/Container';
@@ -14,6 +14,7 @@ import trendingProducts from '../Trending/TrendingData'
 import { IoPawSharp } from "react-icons/io5";
 
 function Trending() {
+    const [activeTab, setActiveTab] = useState("all items");
     const filterButtons = [
         "all items",
         "sales",
@@ -21,6 +22,10 @@ function Trending() {
         "best seller",
         "top rated"
     ];
+    const filteredProducts = trendingProducts.filter((product) => {
+        if (activeTab === "all items") return true;
+        return product.category?.toLowerCase() === activeTab.toLowerCase();
+    });
     return (
         <div className='mt-[50px]  relative'>
             <Container>
@@ -36,8 +41,9 @@ function Trending() {
                                 {filterButtons.map((label, index) => (
                                     <div
                                         key={index}
-                                        className='font-heading capitalize text-gray-600 border border-gray-400 
-                                      hover:bg-button hover:text-white py-2 px-4 rounded-[10px] 
+                                        onClick={() => setActiveTab(label)}
+                                        className='font-heading capitalize text-gray-600 border border-gray-400 hover:border-red-btn 
+                                      hover:bg-red-btn hover:text-white py-2 px-4 rounded-[10px] 
                                         font-semibold duration-200 cursor-pointer'
                                     >
                                         {label}
@@ -48,6 +54,7 @@ function Trending() {
                     </div>
                     <div>
                         <Carousel
+                            key={activeTab}
                             plugins={[
                                 Autoplay({
                                     delay: 1500,
@@ -60,7 +67,7 @@ function Trending() {
                                 loop: true,
                             }}>
                             <CarouselContent>
-                                {trendingProducts.map((product) => (
+                                {filteredProducts.map((product) => (
                                     <CarouselItem key={product.id} className='basis-1/6'>
                                         <div className='border border-gray-300 rounded-[20px] h-[315px] hover:h-[385px] group transition-all duration-300 ease-in-out mb-[75px] hover:mb-0'>
                                             <img

@@ -10,6 +10,7 @@ import MegaMenu from './components/Menubar/MegaMenu'
 import KittenCollections from './components/KittenCollections/KittenCollections'
 import AdultCollections from './components/AdultCollections/AdultCollections'
 import BrandPartners from './components/BrandPartners/BrandPartners'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <KittenCollections/>
       <AdultCollections/>
       <BrandPartners/>
+      <Footer/>
     </div>
   )
 }

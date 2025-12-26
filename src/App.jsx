@@ -1,5 +1,5 @@
 import Banner from './components/Banner/Banner'
-import Menubar from './components/Menubar/Menubar'
+// import Menubar from './components/Menubar/Menubar'
 import Navbar from './components/Navbar/Navbar'
 import './App.css'
 import Trending from './components/Trending/Trending'
@@ -11,6 +11,7 @@ import KittenCollections from './components/KittenCollections/KittenCollections'
 import AdultCollections from './components/AdultCollections/AdultCollections'
 import BrandPartners from './components/BrandPartners/BrandPartners'
 import Footer from './components/Footer/Footer'
+import FAQ from './components/FAQ/FAQ'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
       <KittenCollections/>
       <AdultCollections/>
       <BrandPartners/>
+      <FAQ/>
       <Footer/>
     </div>
   )

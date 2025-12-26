@@ -11,6 +11,9 @@ import { FaPinterest } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import footerData from './FooterData';
 import footer_element01 from "../../assets/footer/footer_element_01.jpg"
+import footer_element02 from "../../assets/footer/footer_element_02.png"
+import footer_element03 from "../../assets/footer/footer_element_03.png"
+import footer_element04 from "../../assets/footer/footer_element_04.png"
 
 function Footer() {
     return (
@@ -77,7 +80,15 @@ function Footer() {
                             )}
                         </div>
                         <div className='col-span-4 relative'>
-                            <img src={footer_element01} alt="" className='rounded-[20px]'/>
+                            <img src={footer_element01} alt="" className='rounded-[20px] relative' />
+                            <img src={footer_element02} alt="" className='absolute bottom-0 left-1/2 -translate-x-1/2' />
+                            <img src={footer_element03} alt="" className='absolute bottom-40 left-20 ' />
+                            <img src={footer_element04} alt="" className='absolute right-10 top-1/2' />
+                            <div className='absolute top-0 p-10 text-white font-heading capitalize'>
+                                <p className='text-[32px] font-bold mb-1'>our newsletter</p>
+                                <p className='text-[16px] font-medium'>be the first to know about new collections and exclusive offers.</p>
+                                <input type="email" name="" id="" placeholder="Enter your email" className='w-full h-12 rounded-[10px] bg-white mt-5 focus:outline-none placeholder:text-black'/>
+                            </div>
                         </div>
                     </div>
                 </div>

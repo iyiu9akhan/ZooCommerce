@@ -48,17 +48,17 @@ function Categories() {
                         <div className='w-8/12 grid grid-cols-4 gap-x-6 gap-y-9 items-center'>
                             {categoriesData.map((cat) => (
                                 <div className={`${cat.bg_color} text-center capitalize rounded-[20px] py-8 cursor-auto group relative`}>
-                                    <img src={cat.img} alt={cat.title} className=' bg-white rounded-full m-auto p-5 mb-4 group-hover:scale-90 scale-100 duration-300' />
+                                    <img src={cat.img} alt={cat.title} className=' bg-white rounded-full m-auto p-5 mb-4 group-hover:scale-90 scale-100 duration-300 pointer-events-none select-none' />
                                     <p className='font-bold font-primary text-[20px] select-none'>{cat.title}</p>
                                     <p className='font-heading font-medium text-gray-600 select-none'>{cat.item} items</p>
-                                    <div className='absolute -bottom-[35px] left-1/2 transform -translate-x-1/2 bg-button p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 scale-0 group-hover:scale-100 cursor-pointer hover:bg-orange-btn border-7 border-white'>
+                                    <div className='absolute -bottom-[35px] left-1/2 transform -translate-x-1/2 bg-button p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 scale-0 group-hover:scale-100 cursor-pointer hover:bg-red-btn border-7 border-white'>
                                         <IoArrowRedoSharp className='text-white text-[25px]' />
                                     </div>
                                 </div>
                             ))}
                         </div>
 
-                        <div className='w-4/12 bg-categoriesCounterBG rounded-[20px] flex flex-col items-center  relative'>
+                        <div className='w-4/12 bg-categoriesCounterBG rounded-[20px] flex flex-col items-center  relative pointer-events-none select-none'>
 
                             {/* <Carousel 
                                 className="rounded-[20px] h-full"

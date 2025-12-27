@@ -15,7 +15,7 @@ function FAQ() {
     return (
         <>
             <Container>
-                <div className='mt-[85px]'>
+                <div className='my-[85px]'>
                     <div className='flex items-center justify-between mb-10'>
                         <div className='flex items-center gap-3'>
                             <TbLocationQuestion className='text-[40px] text-red-btn' />
@@ -42,7 +42,7 @@ function FAQ() {
                                 ))}
                             </Accordion>
                         </div>
-                        <div className='col-span-4 col-start-9'>
+                        <div className='col-span-4 col-start-9 select-none pointer-events-none'>
                             <img src={faq_img} alt="faq_img" className='rounded-[20px]' />
                         </div>
                     </div>

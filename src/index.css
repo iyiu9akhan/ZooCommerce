@@ -35,6 +35,8 @@
   --color-categoriesCounterBG: #5DCB94;
 
   --color-imgProduct_bg: #FCDFFF;
+
+  --color-appPromotion_bg: #FCDFFF;
 }
 
 @theme inline {

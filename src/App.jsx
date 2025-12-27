@@ -13,6 +13,7 @@ import BrandPartners from './components/BrandPartners/BrandPartners'
 import Footer from './components/Footer/Footer'
 import FAQ from './components/FAQ/FAQ'
 import TipsAdvice from './components/TipsAdvice/TipsAdvice'
+import AppPromotion from './components/AppPromotion/AppPromotion'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <AdultCollections/>
       <BrandPartners/>
       <FAQ/>
+      <AppPromotion></AppPromotion>
       <TipsAdvice/>
       <Footer/>
     </div>

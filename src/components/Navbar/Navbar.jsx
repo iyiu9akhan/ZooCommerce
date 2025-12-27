@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav className='border-b border-gray-300 relative z-30'>
             <Container>
                 <div className='my-3 flex justify-between items-center'>
-                    <img src={logo} alt="primary_logo" className='w-[250px] cursor-pointer' />
+                    <img src={logo} alt="primary_logo" className='w-[250px] cursor-pointer ' />
                     <div className='flex gap-5'>
                         <div className='flex items-center gap-3 border rounded-[10px] p-3 cursor-pointer bg-button'>
                             <HiMenuAlt1 className='text-[22px] text-white' />

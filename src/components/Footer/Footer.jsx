@@ -80,7 +80,7 @@ function Footer() {
                                 </div>
                             )}
                         </div>
-                        <div className='col-span-4 relative'>
+                        <div className='col-span-4 relative pointer-events-none select-none'>
                             <img src={footer_element01} alt="" className='rounded-[20px] relative' />
                             <img src={footer_element02} alt="" className='absolute bottom-0 left-1/2 -translate-x-1/2' />
                             <img src={footer_element03} alt="" className='absolute bottom-40 left-20 ' />
@@ -89,8 +89,8 @@ function Footer() {
                                 <p className='text-[32px] font-bold mb-1'>our newsletter</p>
                                 <p className='text-[16px] font-medium'>be the first to know about new collections and exclusive offers.</p>
                                 <div className='relative'>
-                                    <input type="email" name="" id="" placeholder="Enter your email" className='w-full h-12 rounded-[10px] bg-white mt-5 focus:outline-none  placeholder:font-heading placeholder:capitalize placeholder:font-medium text-black px-5' />
-                                    <IoSend className='absolute right-5 text-[22px] text-red-btn top-1/2 cursor-pointer' />
+                                    <input type="email" name="" id="" placeholder="Enter your email" className='w-full h-12 rounded-[10px] bg-white mt-5 focus:outline-none  placeholder:font-heading placeholder:capitalize placeholder:font-medium text-black px-5 pointer-events-auto' />
+                                    <IoSend className='absolute right-5 text-[22px] text-red-btn top-1/2 cursor-pointer pointer-events-auto' />
                                 </div>
                             </div>
                         </div>
@@ -103,8 +103,7 @@ function Footer() {
                         <div>
                             <p className='text-gray-400 capitalize font-heading font-medium'>copyright © 2025 <a className='text-white cursor-pointer'>ZooCommerce</a>. all rights reserved</p>
                         </div>
-                        <img src={footer_payment} alt="" />
-
+                        <img src={footer_payment} alt="paymentOptions" className='select-none pointer-events-none'/>
                         <div className='flex gap-5 items-center capitalize text-gray-400 font-heading font-medium'>
                             <a href="#" className='hover:text-white duration-300'>privacy policy</a>
                             <a href="#" className='hover:text-white duration-300'>contact</a>

@@ -59,7 +59,7 @@ function AppPromotion() {
                             </ul>
                             <div>
                                 <p className='font-heading font-medium text-[16px] capitalize text-gray-500 mb-3'>not a your rewards member yet?</p>
-                                <div className='flex items-center gap-3 text-[20px] cursor-pointer group'>
+                                <div className='flex items-center gap-3 text-[20px] cursor-pointer group pointer-events-auto '>
                                     <p className='capitalize font-heading font-semibold text-[18px] text-red-btn group-hover:text-button duration-300'>read more</p>
                                     <BsArrowRightSquareFill className='text-red-btn group-hover:text-button duration-300' />
                                 </div>

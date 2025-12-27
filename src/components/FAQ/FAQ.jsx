@@ -10,6 +10,11 @@ import {
 } from "@/components/ui/accordion"
 import { BsArrowRightSquareFill } from 'react-icons/bs';
 import faqData from './FAQ_data';
+import faq_element from "../../assets/faq/faq_element.png"
+import faq_element02 from "../../assets/faq/faq_element02.png"
+import faq_element03 from "../../assets/faq/faq_element03.png"
+import faq_element04 from "../../assets/faq/faq_element04.png"
+import faq_element05 from "../../assets/faq/faq_element05.png"
 
 function FAQ() {
     return (
@@ -42,8 +47,13 @@ function FAQ() {
                                 ))}
                             </Accordion>
                         </div>
-                        <div className='col-span-4 col-start-9 select-none pointer-events-none'>
-                            <img src={faq_img} alt="faq_img" className='rounded-[20px]' />
+                        <div className='col-span-4 col-start-9 select-none pointer-events-none bg-[#F9DF8A] rounded-[20px] h-full relative overflow-hidden'>
+                            {/* <img src={faq_img} alt="faq_img" className='rounded-[20px]' /> */}
+                            <img src={faq_element} alt="faq_element" className='absolute -bottom-4 z-999 scale-90'/>
+                            <img src={faq_element02} alt="faq_element" className='absolute bottom-1/2 right-15 z-999'/>
+                            <img src={faq_element03} alt="faq_element" className='absolute bottom-0 z-980 opacity-50'/>
+                            <img src={faq_element04} alt="faq_element" className='absolute bottom-40 left-8 z-980'/>
+                            <img src={faq_element05} alt="faq_element" className='absolute top-0 -right-5 rotate-180 rounded-bl-[20px]'/>
                         </div>
                     </div>
                 </div>

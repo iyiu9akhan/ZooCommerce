@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaStar, FaStarHalfAlt, FaRegStar, FaCartArrowDown } from "react-icons/fa";
 import { FaDog } from "react-icons/fa6";
 import { PiPawPrintFill } from "react-icons/pi";
@@ -11,12 +11,23 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "../ui/carousel"
+import { Skeleton } from "@/components/ui/skeleton";
 import Autoplay from "embla-carousel-autoplay";
 import AdultCollectionsData, { Adultcategories } from './AdultCollectionsData';
+import { AiFillPicture } from "react-icons/ai";
 
 function AdultCollections() {
+    const [isLoading, setIsLoading] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("all");
+
+    useEffect(() => {
+        setIsLoading(true)
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 500)
+        return () => clearTimeout(timer);
+    }, [searchQuery, selectedCategory])
 
     const filteredProducts = AdultCollectionsData.filter((product) => {
         const titleMatch = product.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -25,6 +36,20 @@ function AdultCollections() {
             product.category?.toLowerCase() === selectedCategory.toLowerCase();
         return titleMatch && categoryMatch;
     });
+
+    const ProductSkeleton = () => (
+        <div className="border border-gray-200 rounded-[20px] h-80 mb-[75px] ">
+            <div className='flex relative'>
+                <Skeleton className="h-[200px] w-full rounded-[20px]" />
+                <AiFillPicture className='absolute text-[120px] text-gray-200 left-1/2 top-1/2 -translate-1/2' />
+            </div>
+            <div className='p-4'>
+                <Skeleton className="h-4 w-24 mb-4" />
+                <Skeleton className="h-5 w-full mb-4" />
+                <Skeleton className="h-6 w-20" />
+            </div>
+        </div>
+    );
 
     return (
         <div className='mt-[50px] relative'>
@@ -49,7 +74,7 @@ function AdultCollections() {
                             {searchQuery && (
                                 <ImCross
                                     className='text-[10px] text-gray-400 cursor-pointer hover:text-red-btn transition-all shrink-0'
-                                    onClick={() => setSearchQuery("")} 
+                                    onClick={() => setSearchQuery("")}
                                 />
                             )}
                         </div>
@@ -72,7 +97,15 @@ function AdultCollections() {
                         </div>
 
                         <div className='col-span-10'>
-                            {filteredProducts.length > 0 ? (
+                            {isLoading ? (
+                                <div className='grid grid-cols-5 gap-4'>
+                                    {
+                                        [1, 2, 3, 4, 5].map((item) => (
+                                            <ProductSkeleton key={item} />
+                                        ))
+                                    }
+                                </div>
+                            ) : filteredProducts.length > 0 ? (
                                 <Carousel
                                     key={selectedCategory}
                                     plugins={[
@@ -89,7 +122,7 @@ function AdultCollections() {
                                     <CarouselContent>
                                         {filteredProducts.map((product) => (
                                             <CarouselItem key={product.id} className='basis-1/5'>
-                                                <div className='border border-gray-300 rounded-[20px] h-[315px] hover:h-[385px] group transition-all duration-300 ease-in-out mb-[75px] hover:mb-0'>
+                                                <div className='border border-gray-300 rounded-[20px] h-80 hover:h-[390px] group transition-all duration-300 ease-in-out mb-[75px] hover:mb-0'>
                                                     <img
                                                         src={product.img}
                                                         alt={product.title}
@@ -111,7 +144,7 @@ function AdultCollections() {
                                                                 ({product.rating} reviews)
                                                             </p>
                                                         </div>
-                                                        <p className='font-heading font-semibold capitalize text-[16px] mb-2 truncate'>{product.title}</p>
+                                                        <p className='font-heading font-semibold capitalize text-[16px] mb-2 truncate inline-block max-w-full hover:text-red-btn duration-300 cursor-pointer'>{product.title}</p>
                                                         <p className='font-heading font-semibold text-[22px] text-button mb-3'>{product.price}</p>
 
                                                         <div className="max-h-0 overflow-hidden transition-all ease-out duration-150 group-hover:max-h-[200px] group-hover:ease-in group-hover:duration-500">

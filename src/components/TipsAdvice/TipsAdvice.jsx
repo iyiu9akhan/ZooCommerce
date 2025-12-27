@@ -27,7 +27,7 @@ function TipsAdvice() {
                         <div key={item.id} className='col-span-4 border rounded-[20px] group'>
                             <div className='relative'>
                                 <img src={item.image} alt={item.caption} className='w-full rounded-[20px] cursor-pointer' />
-                                <p className='absolute top-0 left-0 px-3  rounded-[10px] text-white font-heading font-medium mt-3 ml-3 bg-button z-999'>{item.category}</p>
+                                <p className='absolute top-0 left-0 px-3  rounded-[10px] text-white font-heading font-medium mt-3 ml-3 bg-button'>{item.category}</p>
                             </div>
                             <div className='p-8 '>
                                 <div className='flex items-center justify-between text-gray-400 capitalize font-heading font-medium text-[14px]'>
@@ -46,9 +46,9 @@ function TipsAdvice() {
 
                     <div className='col-span-4 flex flex-col border justify-between rounded-[20px] px-5'>
                         {sidebarPosts.map((item) => (
-                            <div key={item.id} className='flex gap-5 group cursor-pointer border-b last:border-0 py-7'>
-                                <img src={item.image} alt={item.caption} className='h-[85px] w-[124px] object-cover rounded-[10px]' />
-                                <div className='flex flex-col justify-between'>
+                            <div key={item.id} className='flex gap-5 border-b last:border-0 py-7'>
+                                <img src={item.image} alt={item.caption} className='h-[85px] w-[124px] object-cover rounded-[10px] '/>
+                                <div className='flex flex-col justify-between cursor-pointer group'>
                                     <p className='font-heading line-clamp-2 font-bold text-[16px] group-hover:text-red-btn duration-300'>
                                         {item.caption}
                                     </p>

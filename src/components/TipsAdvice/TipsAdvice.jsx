@@ -25,7 +25,10 @@ function TipsAdvice() {
                 <div className='grid gap-8 grid-cols-12'>
                     {featuredPosts.map((item) => (
                         <div key={item.id} className='col-span-4 border rounded-[20px] group'>
-                            <img src={item.image} alt={item.caption} className='w-full rounded-[20px] cursor-pointer' />
+                            <div className='relative'>
+                                <img src={item.image} alt={item.caption} className='w-full rounded-[20px] cursor-pointer' />
+                                <p className='absolute top-0 left-0 px-3  rounded-[10px] text-white font-heading font-medium mt-3 ml-3 bg-button z-999'>{item.category}</p>
+                            </div>
                             <div className='p-8 '>
                                 <div className='flex items-center justify-between text-gray-400 capitalize font-heading font-medium text-[14px]'>
                                     <p> {item.date} | {item.category}</p>

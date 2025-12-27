@@ -44,24 +44,24 @@ function Banner() {
                 // rightControl={<div />}
                 indicators={false}
             >
-                <div className='bg-banner-one relative py-[200px] overflow-hidden cursor-auto'>
+                <div className='bg-banner-one relative py-[200px] overflow-hidden cursor-default'>
                     {/* {CustomGroupedControls} */}
-                    <img src={banner_element_01} alt="banner_element_01" className='absolute -left-30 -top-13 z-0 ' />
-                    <img src={banner_element_02} alt="banner_element_02" className='absolute left-72 top-12' />
-                    <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12' />
-                    <div className='absolute right-[50px] top-[200px] z-30'>
+                    <img src={banner_element_01} alt="banner_element_01" className='absolute -left-30 -top-13 z-0 pointer-events-none select-none' />
+                    <img src={banner_element_02} alt="banner_element_02" className='absolute left-72 top-12 pointer-events-none select-none' />
+                    <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12 pointer-events-none select-none' />
+                    <div className='absolute right-[50px] top-[200px] z-30 pointer-events-none select-none'>
                         <img src={banner_element_05} alt="banner_element_05" />
                         <p className='absolute top-[50px] right-[55px] font-heading text-[64px] text-center font-bold text-white capitalize leading-[55px]'>50% <span className='text-[40px] block'>off</span></p>
                     </div>
-                    <img src={banner_element_06} alt="banner_element_06" className='absolute right-[60px] bottom-[280px] z-30' />
-                    <img src={banner_element_07} alt="banner_element_07" className='absolute left-[650px] bottom-0 z-30' />
-                    <img src={banner_img_bg_01} alt="banner_img_bg_01" className='absolute right-[150px] top-[50px]' />
-                    <img src={banner_img_01} alt="banner_img_bg_01" className='absolute right-[100px] top-[110px]' />
+                    <img src={banner_element_06} alt="banner_element_06" className='absolute right-[60px] bottom-[280px] z-30 pointer-events-none select-none' />
+                    <img src={banner_element_07} alt="banner_element_07" className='absolute left-[650px] bottom-0 z-30 pointer-events-none select-none' />
+                    <img src={banner_img_bg_01} alt="banner_img_bg_01" className='absolute right-[150px] top-[50px] pointer-events-none select-none' />
+                    <img src={banner_img_01} alt="banner_img_bg_01" className='absolute right-[100px] top-[110px] pointer-events-none select-none' />
                     <Container>
                         <div className='flex'>
                             <div>
                                 <div className='flex items-center gap-3'>
-                                    <img src={banner_element_03} alt="banner_element_03" className='animate-bounce' />
+                                    <img src={banner_element_03} alt="banner_element_03" className='animate-bounce pointer-events-none select-none' />
                                     <p className='font-subHeading text-[32px] capitalize text-red-btn tracking-widest'>hight rated pet products!</p>
                                 </div>
                                 <div>
@@ -77,23 +77,23 @@ function Banner() {
                     </Container>
                 </div>
 
-                <div className='bg-banner-three relative py-[200px] overflow-hidden cursor-auto'>
-                    <img src={banner_element_01} alt="banner_element_01" className='absolute -left-30 -top-13 z-0' />
-                    <img src={banner_element_02} alt="banner_element_02" className='absolute left-72 top-12' />
-                    <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12' />
-                    <div className='absolute right-[120px] top-20 z-30'>
+                <div className='bg-banner-three relative py-[200px] overflow-hidden cursor-default'>
+                    <img src={banner_element_01} alt="banner_element_01" className='absolute -left-30 -top-13 z-0 pointer-events-none select-none' />
+                    <img src={banner_element_02} alt="banner_element_02" className='absolute left-72 top-12 pointer-events-none select-none' />
+                    <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12 pointer-events-none select-none' />
+                    <div className='absolute right-[120px] top-20 z-30 pointer-events-none select-none'>
                         <img src={banner_element_05} alt="banner_element_05" />
                         <p className='absolute top-[50px] right-[55px] font-heading text-[64px] text-center font-bold text-white capitalize leading-[55px]'>50% <span className='text-[40px] block'>off</span></p>
                     </div>
-                    <img src={banner_element_06} alt="banner_element_06" className='absolute right-[60px] bottom-[280px] z-30' />
-                    <img src={banner_element_07} alt="banner_element_07" className='absolute left-[650px] bottom-0 z-30' />
-                    <img src={banner_img_bg_03} alt="banner_img_bg_03" className='absolute right-[150px] top-[50px]' />
-                    <img src={banner_img_03} alt="banner_img_bg_03" className='absolute right-[230px] top-[150px]' />
+                    <img src={banner_element_06} alt="banner_element_06" className='absolute right-[60px] bottom-[280px] z-30 pointer-events-none select-none' />
+                    <img src={banner_element_07} alt="banner_element_07" className='absolute left-[650px] bottom-0 z-30 pointer-events-none select-none' />
+                    <img src={banner_img_bg_03} alt="banner_img_bg_03" className='absolute right-[150px] top-[50px] pointer-events-none select-none' />
+                    <img src={banner_img_03} alt="banner_img_bg_03" className='absolute right-[230px] top-[150px] pointer-events-none select-none' />
                     <Container>
                         <div className='flex'>
                             <div>
                                 <div className='flex items-center gap-3'>
-                                    <img src={banner_element_03} alt="banner_element_03" className='animate-bounce' />
+                                    <img src={banner_element_03} alt="banner_element_03" className='animate-bounce pointer-events-none select-none' />
                                     <p className='font-subHeading text-[32px] capitalize text-red-btn tracking-widest'>everything & anything pets!</p>
                                 </div>
                                 <div>
@@ -109,18 +109,18 @@ function Banner() {
                     </Container>
                 </div>
 
-                <div className='bg-banner-two relative py-[200px] overflow-hidden cursor-auto'>
-                    <img src={banner_element_01} alt="banner_element_01" className='absolute -left-30 -top-13 z-0' />
-                    <img src={banner_element_02} alt="banner_element_02" className='absolute left-72 top-12' />
-                    <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12' />
-                    <div className='absolute right-[50px] top-[200px] z-30'>
+                <div className='bg-banner-two relative py-[200px] overflow-hidden cursor-default'>
+                    <img src={banner_element_01} alt="banner_element_01" className='absolute -left-30 -top-13 z-0 pointer-events-none select-none' />
+                    <img src={banner_element_02} alt="banner_element_02" className='absolute left-72 top-12 pointer-events-none select-none' />
+                    <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12 pointer-events-none select-none' />
+                    <div className='absolute right-[50px] top-[200px] z-30 pointer-events-none select-none'>
                         <img src={banner_element_05} alt="banner_element_05" />
                         <p className='absolute top-[50px] right-[55px] font-heading text-[64px] text-center font-bold text-white capitalize leading-[55px]'>50% <span className='text-[40px] block'>off</span></p>
                     </div>
-                    <img src={banner_element_06} alt="banner_element_06" className='absolute right-[60px] bottom-[280px] z-30' />
-                    <img src={banner_element_07} alt="banner_element_07" className='absolute left-[650px] bottom-0 z-30' />
-                    <img src={banner_img_bg_02} alt="banner_img_bg_02" className='absolute right-[150px] top-[50px]' />
-                    <img src={banner_img_02} alt="banner_img_bg_02" className='absolute right-[250px] top-10' />
+                    <img src={banner_element_06} alt="banner_element_06" className='absolute right-[60px] bottom-[280px] z-30 pointer-events-none select-none' />
+                    <img src={banner_element_07} alt="banner_element_07" className='absolute left-[650px] bottom-0 z-30 pointer-events-none select-none' />
+                    <img src={banner_img_bg_02} alt="banner_img_bg_02" className='absolute right-[150px] top-[50px] pointer-events-none select-none' />
+                    <img src={banner_img_02} alt="banner_img_bg_02" className='absolute right-[250px] top-10 pointer-events-none select-none' />
                     <Container>
                         <div className='flex'>
                             <div>

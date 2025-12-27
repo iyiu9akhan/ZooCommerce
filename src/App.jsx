@@ -12,6 +12,7 @@ import AdultCollections from './components/AdultCollections/AdultCollections'
 import BrandPartners from './components/BrandPartners/BrandPartners'
 import Footer from './components/Footer/Footer'
 import FAQ from './components/FAQ/FAQ'
+import TipsAdvice from './components/TipsAdvice/TipsAdvice'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
       <AdultCollections/>
       <BrandPartners/>
       <FAQ/>
+      <TipsAdvice/>
       <Footer/>
     </div>
   )

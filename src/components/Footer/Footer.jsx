@@ -75,7 +75,6 @@ function Footer() {
                                                 {sub_item}
                                             </li>
                                         )
-
                                         )}
                                     </ul>
                                 </div>

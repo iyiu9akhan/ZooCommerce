@@ -84,7 +84,7 @@ const KittenCollectionsData = [
         rating: 5,
         category: "beds",
     }, {
-        id: 8,
+        id: 9,
         img: kittenCollections_img_09,
         title: "Meow Mix Irresistibles Soft Wet Food fot Cats",
         price: "400.00 BDT",

@@ -16,7 +16,7 @@ function FAQ() {
         <>
             <Container>
                 <div className='mt-[85px]'>
-                    <div className='flex items-center justify-between mb-5'>
+                    <div className='flex items-center justify-between mb-10'>
                         <div className='flex items-center gap-3'>
                             <TbLocationQuestion className='text-[40px] text-red-btn' />
                             <p className='font-heading text-[36px] capitalize font-bold'>frequently asked questions</p>
@@ -29,7 +29,7 @@ function FAQ() {
                             </div>
                         </div>
                     </div>
-                    <div className='grid grid-cols-12'>
+                    <div className='grid grid-cols-12 items-center'>
                         <div className='col-span-7'>
                             <Accordion type="single" collapsible defaultValue="faq-1" >
                                 {faqData.map((item) => (

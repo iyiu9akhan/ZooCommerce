@@ -170,7 +170,7 @@ function NavigationMenuDemo() {
     return (
         <>
             <Container>
-                <div className="flex justify-between">
+                <div className="hidden sm:flex justify-between">
                     <NavigationMenu >
                         <NavigationMenuList className="flex-wrap gap-5">
 

@@ -44,7 +44,7 @@ function Banner() {
                 // rightControl={<div />}
                 indicators={false}
             >
-                <div className='bg-banner-one relative pt-[50px] pb-80 sm:py-[200px] overflow-hidden cursor-default'>
+                <div className='bg-banner-one relative pt-[50px] pb-100 sm:py-[200px] overflow-hidden cursor-default'>
                     {/* {CustomGroupedControls} */}
                     <img src={banner_element_01} alt="banner_element_01" className='absolute -left-10 sm:-left-30 sm:-top-13 -top-6 w-[150px] sm:w-[355px] z-0 pointer-events-none select-none' />
                     <img src={banner_element_02} alt="banner_element_02" className='absolute left-21 sm:left-72 top-12 w-10 sm:w-12 pointer-events-none select-none' />
@@ -55,15 +55,15 @@ function Banner() {
                     </div>
                     <img src={banner_element_06} alt="banner_element_06" className='absolute right-[60px] bottom-[280px] z-30 pointer-events-none select-none' />
                     <img src={banner_element_07} alt="banner_element_07" className='absolute left-[650px] bottom-0 z-30 pointer-events-none select-none' />
-                    <img src={banner_img_bg_01} alt="banner_img_bg_01" className='absolute sm:right-[150px] sm:top-[50px] w-[350px] sm:w-[700px] bottom-5 pointer-events-none select-none' />
+                    <img src={banner_img_bg_01} alt="banner_img_bg_01" className='absolute left-1/2 -translate-x-1/2 sm:left-auto sm:right-[150px] sm:translate-x-0 sm:top-[50px] w-[330px] sm:w-[700px] bottom-10 pointer-events-none select-none' />
                     <img src={banner_img_01} alt="banner_img_bg_01" className='absolute sm:right-[100px] sm:top-[110px] bottom-5 pointer-events-none select-none' />
                     <Container>
-                        <div>
+                        <div className='text-center sm:text-start'>
                             <div className='flex items-center gap-3 justify-center sm:justify-start mt-10'>
                                 <img src={banner_element_03} alt="banner_element_03" className='animate-bounce ' />
                                 <p className='font-subHeading font-medium text-[22px] sm:text-[32px] capitalize text-red-btn tracking-widest'>hight rated pet products!</p>
                             </div>
-                            <div>
+                            <div className='text-center sm:text-start'>
                                 <p className='text-[39px] sm:text-[96px] max-w-[650px] text-center sm:text-start capitalize font-bold leading-10 sm:leading-25 mt-5 text-heading font-heading'>feed them elite formulas</p>
                                 <p className='text-[18px] capitalize font-medium text-gray-600 mt-5'>fuel your dog with the gold standard of performance nutrition</p>
                             </div>
@@ -75,7 +75,7 @@ function Banner() {
                     </Container>
                 </div>
 
-                <div className='bg-banner-one relative pt-[50px] pb-80 sm:py-[200px] overflow-hidden cursor-default'>
+                {/* <div className='bg-banner-one relative pt-[50px] pb-80 sm:py-[200px] overflow-hidden cursor-default'>
                     <img src={banner_element_01} alt="banner_element_01" className='absolute -left-10 sm:-left-30 sm:-top-13 -top-6 w-[150px] sm:w-[355px] z-0 pointer-events-none select-none' />
                     <img src={banner_element_02} alt="banner_element_02" className='absolute left-21 sm:left-72 top-12 w-10 sm:w-12 pointer-events-none select-none' />
                     <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12 pointer-events-none select-none' />
@@ -95,7 +95,7 @@ function Banner() {
                                     <p className='font-subHeading font-medium text-[22px] sm:text-[32px] capitalize text-red-btn tracking-widest'>hight rated pet products!</p>
                                 </div>
                                 <div>
-                                    <p className='text-[39px] sm:text-[96px] max-w-[650px] text-center sm:text-start capitalize font-bold leading-10 sm:leading-25 mt-5 text-heading font-heading'>toy treasure for your pets</p>
+                                    <p className='text-[42px] sm:text-[96px] max-w-[650px] text-center sm:text-start capitalize font-bold leading-11 sm:leading-25 mt-5 text-heading font-heading'>toy treasure for your pets</p>
                                     <p className='text-[18px] capitalize font-medium text-gray-600 mt-5'>healthy and nutritional food for cat & poppies</p>
                                 </div>
                                 <div className='inline-flex items-center bg-red-btn  mt-5 py-3 px-6 gap-3 rounded-[10px] cursor-pointer hover:bg-button duration-300'>
@@ -105,9 +105,9 @@ function Banner() {
                             </div>
                         </div>
                     </Container>
-                </div>
+                </div> */}
 
-                <div className='bg-banner-one relative pt-[50px] pb-80 sm:py-[200px] overflow-hidden cursor-default'>
+                {/* <div className='bg-banner-one relative pt-[50px] pb-80 sm:py-[200px] overflow-hidden cursor-default'>
                     <img src={banner_element_01} alt="banner_element_01" className='absolute -left-10 sm:-left-30 sm:-top-13 -top-6 w-[150px] sm:w-[355px] z-0 pointer-events-none select-none' />
                     <img src={banner_element_02} alt="banner_element_02" className='absolute left-21 sm:left-72 top-12 w-10 sm:w-12 pointer-events-none select-none' />
                     <img src={banner_element_04} alt="banner_element_04" className='absolute right-[750px] top-12 pointer-events-none select-none' />
@@ -127,7 +127,7 @@ function Banner() {
                                     <p className='font-subHeading font-medium text-[22px] sm:text-[32px] capitalize text-red-btn tracking-widest'>hight rated pet products!</p>
                                 </div>
                                 <div>
-                                    <p className='text-[39px] sm:text-[96px] max-w-[650px] text-center sm:text-start capitalize font-bold leading-10 sm:leading-25 mt-5 text-heading font-heading'>the clearance sales event</p>
+                                    <p className='text-[4px] sm:text-[96px] max-w-[650px] text-center sm:text-start capitalize font-bold leading-10 sm:leading-25 mt-5 text-heading font-heading'>the clearance sales event</p>
                                     <p className='text-[18px] capitalize font-medium text-gray-600 mt-5'>fuel your dog with the gold standard of performance nutrition</p>
                                 </div>
                                 <div className='inline-flex items-center bg-red-btn mt-5 py-3 px-6 gap-3 rounded-[10px] cursor-pointer hover:bg-button duration-300'>
@@ -137,7 +137,7 @@ function Banner() {
                             </div>
                         </div>
                     </Container>
-                </div>
+                </div> */}
 
 
             </Carousel>

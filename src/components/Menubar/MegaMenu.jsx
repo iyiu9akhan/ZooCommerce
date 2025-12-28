@@ -106,18 +106,18 @@ const petShopData = [
         // bg_color: "bg-categoriesBG_reptile"
     },
     {
-        category: "small pet",
+        category: "mdall pet",
         subcategories: [
-            { name: "food", href: "/small-pet/food" },
-            { name: "cages", href: "/small-pet/cages" },
-            { name: "bedding", href: "/small-pet/bedding" },
-            { name: "wheels", href: "/small-pet/wheels" },
-            { name: "toys", href: "/small-pet/toys" },
-            { name: "hideouts", href: "/small-pet/hideouts" },
-            { name: "grooming", href: "/small-pet/grooming" },
-            { name: "health", href: "/small-pet/health" },
+            { name: "food", href: "/mdall-pet/food" },
+            { name: "cages", href: "/mdall-pet/cages" },
+            { name: "bedding", href: "/mdall-pet/bedding" },
+            { name: "wheels", href: "/mdall-pet/wheels" },
+            { name: "toys", href: "/mdall-pet/toys" },
+            { name: "hideouts", href: "/mdall-pet/hideouts" },
+            { name: "grooming", href: "/mdall-pet/grooming" },
+            { name: "health", href: "/mdall-pet/health" },
         ],
-        // bg_color: "bg-categoriesBG_smallPet"
+        // bg_color: "bg-categoriesBG_mdallPet"
     },
     {
         category: "fish",
@@ -142,7 +142,7 @@ const petShopData = [
 //     "bird": "hover:bg-categoriesBG_bird",
 //     "turtle": "hover:bg-categoriesBG_turtle",
 //     "reptile": "hover:bg-categoriesBG_reptile",
-//     "small pet": "hover:bg-categoriesBG_smallPet",
+//     "mdall pet": "hover:bg-categoriesBG_mdallPet",
 //     "fish": "hover:bg-categoriesBG_fish",
 // }; 
 const bgColor = {
@@ -152,7 +152,7 @@ const bgColor = {
     "bird": "bg-categoriesBG_bird",
     "turtle": "bg-categoriesBG_turtle",
     "reptile": "bg-categoriesBG_reptile",
-    "small pet": "bg-categoriesBG_smallPet",
+    "mdall pet": "bg-categoriesBG_mdallPet",
     "fish": "bg-categoriesBG_fish",
 };
 // const hoverColorMap = {
@@ -162,7 +162,7 @@ const bgColor = {
 //     "bird": "hover:bg-categoriesBG_bird",
 //     "turtle": "hover:bg-categoriesBG_turtle",
 //     "reptile": "hover:bg-categoriesBG_reptile",
-//     "small pet": "hover:bg-categoriesBG_smallPet",
+//     "mdall pet": "hover:bg-categoriesBG_mdallPet",
 //     "fish": "hover:bg-categoriesBG_fish",
 // };
 
@@ -170,7 +170,7 @@ function NavigationMenuDemo() {
     return (
         <>
             <Container>
-                <div className="hidden sm:flex justify-between">
+                <div className="hidden md:flex justify-between">
                     <NavigationMenu >
                         <NavigationMenuList className="flex-wrap gap-5">
 
@@ -245,10 +245,10 @@ function NavigationMenuDemo() {
                                                             className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-4 no-underline outline-hidden transition-all duration-200 select-none focus:shadow-md md:p-6"
                                                             href="/"
                                                         >
-                                                            <div className="capitalize mb-2 text-lg font-medium sm:mt-4">
+                                                            <div className="capitalize mb-2 text-lg font-medium md:mt-4">
                                                                 your cat
                                                             </div>
-                                                            <p className="text-muted-foreground text-sm leading-tight">
+                                                            <p className="text-muted-foreground text-md leading-tight">
                                                                 Beautifully designed components built with Tailwind CSS.
                                                             </p>
                                                         </a>
@@ -273,10 +273,10 @@ function NavigationMenuDemo() {
                                                             className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-4 no-underline outline-hidden transition-all duration-200 select-none focus:shadow-md md:p-6"
                                                             href="/"
                                                         >
-                                                            <div className="capitalize mb-2 text-lg font-medium sm:mt-4">
+                                                            <div className="capitalize mb-2 text-lg font-medium md:mt-4">
                                                                 your cat
                                                             </div>
-                                                            <p className="text-muted-foreground text-sm leading-tight">
+                                                            <p className="text-muted-foreground text-md leading-tight">
                                                                 Beautifully designed components built with Tailwind CSS.
                                                             </p>
                                                         </a>
@@ -381,8 +381,8 @@ function ListItem({
                     // This is standard shadcn/ui styling for a navigation menu link item
                     className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
-                    <div className="text-sm leading-none font-medium">{title}</div>
-                    <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+                    <div className="text-md leading-none font-medium">{title}</div>
+                    <p className="text-muted-foreground line-clamp-2 text-md leading-snug">
                         {children}
                     </p>
                 </a>

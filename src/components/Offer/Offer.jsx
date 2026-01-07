@@ -54,30 +54,32 @@ function Offer() {
     return (
         <>
             <Container>
-                <div >
-                    <div className='flex justify-between gap-10 mb-10 '>
-                        {offerTopData.map((offer_top) => (
-                            <div
-                                className={`flex ${offer_top.bgColor} rounded-[20px] flex-1 p-[30px] justify-between items-center cursor-pointer group border ${offer_top.borderColor}`}>
-                                <div className='select-none'>
-                                    <p className='font-heading text-[22px] font-bold capitalize mb-2 '>
-                                        {offer_top.title}
-                                    </p>
-                                    <p className='font-heading text-[16px] font-medium capitalize text-gray-500 '>
-                                        {offer_top.subtitle}
-                                    </p>
+                <div className='mx-3 md:mx-auto'>
+                    <div >
+                        <div className='flex flex-col gap-3 md:flex md:flex-row md:justify-between md:gap-10 mb-10 '>
+                            {offerTopData.map((offer_top) => (
+                                <div
+                                    className={`flex ${offer_top.bgColor} rounded-[20px] flex-1 p-[18px] md:p-[30px] justify-between items-center cursor-pointer group border ${offer_top.borderColor}`}>
+                                    <div className='select-none'>
+                                        <p className='font-heading text-[20px] md:text-[22px] font-bold capitalize mb-2 '>
+                                            {offer_top.title}
+                                        </p>
+                                        <p className='font-heading text-[15px] md:text-[16px] font-medium capitalize text-gray-500 '>
+                                            {offer_top.subtitle}
+                                        </p>
+                                    </div>
+                                    <offer_top.icon className={`text-[45px] md:text-[60px] ${offer_top.iconColor} transition duration-300 ease-in-out transform scale-100 group-hover:scale-90`} />
                                 </div>
-                                <offer_top.icon className={`text-[60px] ${offer_top.iconColor} transition duration-300 ease-in-out transform scale-100 group-hover:scale-90`} />
+                            ))}
+                        </div>
+                    </div>
+                    <div className='grid grid-cols-2 md:flex md:justify-between gap-5 mb-20 pointer-events-none select-none'>
+                        {offerBottomData.map((offer_bottom) => (
+                            <div>
+                                <img src={offer_bottom.img} alt="offerBottom_img" className='rounded-[20px]' />
                             </div>
                         ))}
                     </div>
-                </div>
-                <div className='flex justify-between gap-5 mb-20 pointer-events-none select-none'>
-                    {offerBottomData.map((offer_bottom) => (
-                        <div>
-                            <img src={offer_bottom.img} alt="offerBottom_img" className='rounded-[20px]'/>
-                        </div>
-                    ))}
                 </div>
             </Container>
         </>

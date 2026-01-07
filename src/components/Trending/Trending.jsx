@@ -27,24 +27,24 @@ function Trending() {
         return product.category?.toLowerCase() === activeTab.toLowerCase();
     });
     return (
-        <div className='mt-[50px]  relative'>
+        <div className='mt-[50px] relative'>
             <Container>
-                <div>
-                    <div className='flex justify-between items-center mb-10'>
-                        <div className='flex gap-3 items-center'>
+                <div className='mx-3 md:mx-0'>
+                    <div className='md:flex md:justify-between md:items-center mb-10'>
+                        <div className='flex gap-3 items-center mb-5 md:mb-0'>
                             {/* <img src={trending_icon} alt="trending_icon" className='h-[45px] w-[45px]' /> */}
-                            <IoPawSharp className='text-red-btn text-[50px]' />
-                            <p className='font-heading text-[36px] capitalize font-bold'>trending this week</p>
+                            <IoPawSharp className='text-red-btn text-[40px] md:text-[50px]' />
+                            <p className='font-heading text-[30px] md:text-[36px] capitalize font-bold'>trending this week</p>
                         </div>
                         <div>
-                            <div className='flex items-center gap-3 '>
+                            <div className='grid gap-3 grid-cols-3  md:flex md:items-center'>
                                 {filterButtons.map((label, index) => (
                                     <div
                                         key={index}
                                         onClick={() => setActiveTab(label)}
-                                        className={`font-heading capitalize py-2 px-4 rounded-[10px] font-semibold duration-200 cursor-pointer border ${activeTab === label
-                                                ? 'bg-red-btn text-white border-red-btn'
-                                                : 'text-gray-600 border-gray-400 hover:border-red-btn hover:bg-red-btn hover:text-white' 
+                                        className={`font-heading capitalize py-1 md:py-2 px-4 rounded-[10px] text-[15px] md:text-[18px] font-semibold duration-200 cursor-pointer border ${activeTab === label
+                                            ? 'bg-red-btn text-white border-red-btn'
+                                            : 'text-gray-600 border-gray-400 hover:border-red-btn hover:bg-red-btn hover:text-white'
                                             }`}
                                     >
                                         {label}
@@ -69,15 +69,15 @@ function Trending() {
                             }}>
                             <CarouselContent>
                                 {filteredProducts.map((product) => (
-                                    <CarouselItem key={product.id} className='basis-1/6'>
-                                        <div className='border border-gray-300 rounded-[20px] h-[315px] hover:h-[385px] group transition-all duration-300 ease-in-out mb-[75px] hover:mb-0'>
+                                    <CarouselItem key={product.id} className='basis-1/2 md:basis-1/6'>
+                                        <div className='border border-gray-300 rounded-[20px] h-[285px] hover:h-[340px] md:h-[315px] md:hover:h-[385px] group transition-all duration-300 ease-in-out mb-[75px] hover:mb-0'>
                                             <img
                                                 src={product.img}
                                                 alt={product.title}
                                                 className='rounded-[20px] cursor-pointer mb-3'
                                             />
                                             <div className='px-4'>
-                                                <div className='flex gap-0.5 text-amber-500 items-center mb-1'>
+                                                <div className='flex gap-0.5 text-amber-500 items-center mb-1 text-[12px] md:text-[16px]'>
                                                     {[...Array(5)].map((_, i) => {
                                                         if (i < Math.floor(product.rating)) {
                                                             return <FaStar key={i} />;
@@ -88,7 +88,7 @@ function Trending() {
                                                         return <FaRegStar key={i} className="text-gray-300" />
                                                     })}
 
-                                                    <p className='ml-2 text-gray-500 text-[13px] font-medium'>
+                                                    <p className='ml-2 text-gray-500 text-[11px] md:text-[13px] font-medium'>
                                                         ({product.rating} reviews)
                                                     </p>
                                                 </div>
@@ -101,12 +101,12 @@ function Trending() {
                                                 <div className="max-h-0 overflow-hidden transition-all ease-out duration-150 group-hover:max-h-[200px] group-hover:ease-in group-hover:duration-500">
                                                     <div className='flex items-center justify-between mb-4 mt-2'>
                                                         <div className='flex items-center'>
-                                                            <div className='h-[42px] w-[42px] border flex items-center justify-center rounded-l-[9px] cursor-pointer border-gray-300 border-r-0'>-</div>
-                                                            <div className='h-[42px] w-[42px] border flex items-center justify-center border-gray-300'>1</div>
-                                                            <div className='h-[42px] w-[42px] border flex items-center justify-center rounded-r-[9px] cursor-pointer border-gray-300 border-l-0'>+</div>
+                                                            <div className='h-[33px] w-[33px] md:h-[42px] md:w-[42px] border flex items-center justify-center rounded-l-[9px] cursor-pointer border-gray-300 border-r-0'>-</div>
+                                                            <div className='h-[33px] w-[33px] md:h-[42px] md:w-[42px] border flex items-center justify-center border-gray-300'>1</div>
+                                                            <div className='h-[33px] w-[33px] md:h-[42px] md:w-[42px] border flex items-center justify-center rounded-r-[9px] cursor-pointer border-gray-300 border-l-0'>+</div>
                                                         </div>
-                                                        <div className='h-[42px] w-[42px] bg-button flex items-center justify-center rounded-[9px] cursor-pointer'>
-                                                            <FaCartArrowDown className='text-[20px] text-white' />
+                                                        <div className='h-[33px] w-[33px] md:h-[42px] md:w-[42px] bg-button flex items-center justify-center rounded-[9px] cursor-pointer'>
+                                                            <FaCartArrowDown className=' text-[16px] md:text-[20px] text-white' />
                                                         </div>
                                                     </div>
                                                 </div>

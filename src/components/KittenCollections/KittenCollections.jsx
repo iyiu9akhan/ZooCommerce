@@ -69,7 +69,6 @@ function KittenCollections() {
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                             />
-
                             {searchQuery && (
                                 <ImCross
                                     className='text-[10px] text-gray-400 cursor-pointer hover:text-red-btn transition-all shrink-0'

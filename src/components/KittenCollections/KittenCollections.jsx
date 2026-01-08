@@ -53,11 +53,11 @@ function KittenCollections() {
     return (
         <div className='mt-[50px] relative'>
             <Container>
-                <div>
+                <div className='mx-3 md:mx-auto'>
                     <div className='flex justify-between items-center mb-10 relative'>
-                        <div className='flex gap-3 items-center'>
-                            <FaCat className='text-red-btn text-[40px]' />
-                            <p className='font-heading text-[36px] capitalize font-bold'>collections for kittens</p>
+                        <div className='flex gap-3 items-center mb-5 md:mb-0'>
+                            <FaCat className='text-red-btn text-[40px] md:text-[50px]' />
+                            <p className='font-heading text-[30px] md:text-[36px] capitalize font-bold'>collections for kittens</p>
                         </div>
                         <div className='flex items-center gap-2 border border-button px-3 h-[35px] rounded-[5px] w-[200px] absolute right-29 top-[19px]'>
                             <ImSearch className='text-button shrink-0' />
@@ -136,7 +136,6 @@ function KittenCollections() {
                                                                 }
                                                                 return <FaRegStar key={i} className="text-gray-300" />;
                                                             })}
-
                                                             <p className='ml-2 text-gray-500 text-[13px] font-medium'>
                                                                 ({product.rating} reviews)
                                                             </p>

@@ -13,7 +13,7 @@ export const kittenCategories = [
     "treats",
     "dry food",
     "wet food",
-    "accessories",
+    "toy item",
     "litter",
     "beds",
     "health",

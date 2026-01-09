@@ -37,9 +37,9 @@ function KittenCollections() {
     });
 
     const ProductSkeleton = () => (
-        <div className="border border-gray-200 rounded-[20px] h-80 mb-[75px] ">
+        <div className="border border-gray-200 rounded-[20px] h-[290px] md:h-80 mb-[75px] ">
             <div className='flex relative'>
-                <Skeleton className="h-[200px] w-full rounded-[20px]" />
+                <Skeleton className="h-[165px] md:h-[200px] w-full rounded-[20px]" />
                 <AiFillPicture className='absolute text-[120px] text-gray-200 left-1/2 top-1/2 -translate-1/2' />
             </div>
             <div className='p-4'>
@@ -59,7 +59,7 @@ function KittenCollections() {
                             <FaCat className='text-red-btn text-[40px] md:text-[50px]' />
                             <p className='font-heading text-[30px] md:text-[36px] capitalize font-bold'>collections for kittens</p>
                         </div>
-                        <div className='flex items-center gap-2 border border-button px-3 h-[35px] rounded-[5px] w-[200px] absolute right-29 top-[19px]'>
+                        <div className='flex items-center gap-2 border border-button px-3 h-[35px] rounded-[5px] w-[200px] absolute md:right-29 top-[60px] md:top-[19px]'>
                             <ImSearch className='text-button shrink-0' />
 
                             <input
@@ -78,16 +78,16 @@ function KittenCollections() {
                         </div>
                     </div>
 
-                    <div className='grid grid-cols-12 gap-5'>
-                        <div className='col-span-2 border-2 border-red-btn rounded-[20px] px-6 h-[315px] flex flex-col justify-center'>
+                    <div className='md:grid md:grid-cols-12 gap-5'>
+                        <div className='col-span-2 md:border-2 md:border-red-btn rounded-[20px] mb-5 md:mb-0 md:px-6 md:h-[315px] grid grid-cols-3 gap-y-2 gap-x-3 items-center md:items-stretch md:flex md:flex-col md:justify-center md:gap-x-0 md:gap-y-0'>
                             {["all", ...kittenCategories].map((item, index) => (
                                 <div
                                     key={index}
                                     onClick={() => setSelectedCategory(item)}
-                                    className='flex items-center gap-2 group cursor-pointer border-b last:border-0'
+                                    className={`flex items-center gap-2 group cursor-pointer border-gray-400 border rounded-[10px] px-2 md:px-0 md:rounded-none md:border-gray-300 md:border-0 md:border-b md:last:border-0 ${selectedCategory.toLowerCase() === item.toLowerCase() ? "bg-red-btn border-red-btn text-white md:bg-transparent" : "text-gray-500"} `}
                                 >
-                                    <PiPawPrintFill className={`text-[18px] duration-200 group-hover:text-red-btn ${selectedCategory.toLowerCase() === item.toLowerCase() ? "text-red-btn" : "text-gray-500"}`} />
-                                    <p className={`capitalize font-heading font-medium duration-200 text-[18px] py-1 group-hover:text-red-btn ${selectedCategory.toLowerCase() === item.toLowerCase() ? "text-red-btn" : "text-black"}`}>
+                                    <PiPawPrintFill className={`text-[18px] duration-200 md:group-hover:text-red-btn ${selectedCategory.toLowerCase() === item.toLowerCase() ? "text-white md:text-red-btn" : "text-gray-500"}`} />
+                                    <p className={`capitalize font-heading font-medium duration-200 text-[15px] md:text-[18px] py-1 md:group-hover:text-red-btn ${selectedCategory.toLowerCase() === item.toLowerCase() ? "text-white md:text-red-btn" : "text-black"}`}>
                                         {item}
                                     </p>
                                 </div>
@@ -96,9 +96,11 @@ function KittenCollections() {
 
                         <div className='col-span-10'>
                             {isLoading ? (
-                                <div className='grid grid-cols-5 gap-4'>
-                                    {[1, 2, 3, 4, 5].map((item) => (
-                                        <ProductSkeleton key={item} />
+                                <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
+                                    {[1, 2, 3, 4, 5].map((item, index) => (
+                                        <div key={item} className={index >= 2 ? 'hidden md:block' : 'block'}>
+                                            <ProductSkeleton />
+                                        </div>
                                     ))}
                                 </div>
                             ) : filteredProducts.length > 0 ? (
@@ -117,15 +119,15 @@ function KittenCollections() {
                                     }}>
                                     <CarouselContent>
                                         {filteredProducts.map((product) => (
-                                            <CarouselItem key={product.id} className='basis-1/5'>
-                                                <div className='border border-gray-300 rounded-[20px] h-80 hover:h-[390px] group transition-all duration-300 ease-in-out mb-[75px] hover:mb-0'>
+                                            <CarouselItem key={product.id} className='md:basis-1/5 basis-2/4'>
+                                                <div className='border border-gray-300 rounded-[20px] h-[285px] hover:h-[340px] md:h-[315px] md:hover:h-[385px] group transition-all duration-300 ease-in-out mb-20 hover:mb-[25px] md:hover:mb-2.5'>
                                                     <img
                                                         src={product.img}
                                                         alt={product.title}
-                                                        className='rounded-[20px] cursor-pointer mb-3 w-full'
+                                                        className='rounded-[20px] cursor-pointer mb-3'
                                                     />
                                                     <div className='px-4'>
-                                                        <div className='flex gap-0.5 text-amber-500 items-center mb-1'>
+                                                        <div className='flex gap-0.5 text-amber-500 items-center mb-1 text-[12px] md:text-[16px]'>
                                                             {[...Array(5)].map((_, i) => {
                                                                 if (i < Math.floor(product.rating)) {
                                                                     return <FaStar key={i} />;
@@ -133,26 +135,28 @@ function KittenCollections() {
                                                                 if (i === Math.floor(product.rating) && product.rating % 1 >= 0.5) {
                                                                     return <FaStarHalfAlt key={i} />;
                                                                 }
-                                                                return <FaRegStar key={i} className="text-gray-300" />;
+                                                                return <FaRegStar key={i} className="text-gray-300" />
                                                             })}
-                                                            <p className='ml-2 text-gray-500 text-[13px] font-medium'>
+
+                                                            <p className='ml-2 text-gray-500 text-[11px] md:text-[13px] font-medium'>
                                                                 ({product.rating} reviews)
                                                             </p>
                                                         </div>
-                                                        <p className='inline-block max-w-full truncate font-heading font-semibold capitalize text-[16px] mb-2 cursor-pointer hover:text-red-btn duration-300'>
+                                                        <p className='font-heading font-semibold capitalize text-[16px] mb-2 cursor-pointer truncate'>
                                                             {product.title}
                                                         </p>
-                                                        <p className='font-heading font-semibold text-[22px] text-button mb-3'>{product.price}</p>
-
+                                                        <p className='font-heading font-semibold capitalize text-[22px] text-button mb-3'>
+                                                            {product.price}
+                                                        </p>
                                                         <div className="max-h-0 overflow-hidden transition-all ease-out duration-150 group-hover:max-h-[200px] group-hover:ease-in group-hover:duration-500">
                                                             <div className='flex items-center justify-between mb-4 mt-2'>
                                                                 <div className='flex items-center'>
-                                                                    <div className='h-[42px] w-[35px] border flex items-center justify-center rounded-l-[9px] cursor-pointer border-gray-300'>-</div>
-                                                                    <div className='h-[42px] w-[35px] border-t border-b flex items-center justify-center border-gray-300'>1</div>
-                                                                    <div className='h-[42px] w-[35px] border flex items-center justify-center rounded-r-[9px] cursor-pointer border-gray-300'>+</div>
+                                                                    <div className='h-[33px] w-[33px] md:h-[42px] md:w-[42px] border flex items-center justify-center rounded-l-[9px] cursor-pointer border-gray-300 border-r-0'>-</div>
+                                                                    <div className='h-[33px] w-[33px] md:h-[42px] md:w-[42px] border flex items-center justify-center border-gray-300'>1</div>
+                                                                    <div className='h-[33px] w-[33px] md:h-[42px] md:w-[42px] border flex items-center justify-center rounded-r-[9px] cursor-pointer border-gray-300 border-l-0'>+</div>
                                                                 </div>
-                                                                <div className='h-[42px] w-[42px] bg-button flex items-center justify-center rounded-[9px] cursor-pointer'>
-                                                                    <FaCartArrowDown className='text-[20px] text-white' />
+                                                                <div className='h-[33px] w-[33px] md:h-[42px] md:w-[42px] bg-button flex items-center justify-center rounded-[9px] cursor-pointer'>
+                                                                    <FaCartArrowDown className=' text-[16px] md:text-[20px] text-white' />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -161,13 +165,13 @@ function KittenCollections() {
                                             </CarouselItem>
                                         ))}
                                     </CarouselContent>
-                                    <div className='absolute -top-[75px] right-0 flex gap-5'>
+                                    <div className='absolute -top-45 md:-top-[75px] right-0 flex gap-5'>
                                         <CarouselPrevious className="cursor-pointer static translate-y-0 border-button text-button hover:bg-button hover:text-white h-[35px] w-[35px] rounded-[5px]" />
                                         <CarouselNext className="cursor-pointer static translate-y-0 border-button text-button hover:bg-button hover:text-white h-[35px] w-[35px] rounded-[5px]" />
                                     </div>
                                 </Carousel>
                             ) : (
-                                <div className="text-center py-20 text-gray-500 h-[315px] border rounded-[20px] flex flex-col justify-center font-heading">
+                                <div className="text-center py-20 text-gray-500 h-[290px] md:h-[315px] border rounded-[20px] flex flex-col justify-center font-heading mb-[125px] md:mb-20">
                                     <p className='text-[22px] capitalize'>No products found in " {selectedCategory} "</p>
                                     <button
                                         onClick={() => { setSelectedCategory("all"); setSearchQuery(""); }}

@@ -24,7 +24,7 @@
     "flowbite": "^4.0.1",
     "flowbite-react": "^0.12.10",
     "lucide-react": "^0.555.0",
-    "next": "^16.0.10",
+    "next": "^9.3.3",
     "react": "^19.2.3",
     "react-bootstrap": "^2.10.10",
     "react-countdown": "^2.3.6",

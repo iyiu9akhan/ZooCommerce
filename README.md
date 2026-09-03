@@ -1,16 +1,20 @@
-# React + Vite
+ZooCommerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ZooCommerce is a clean and fully responsive e-commerce web application built for pet lovers. It allows users to browse various pet categories, check trending items, view pet food and supplies, and easily manage their shopping needs.
 
-Currently, two official plugins are available:
+Live Demo :
+Live website here: https://zoo-commerce.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features : 
+1. Browse by Categories: Easily find products for Cats, Dogs, Birds, Fish, Rabbits, Reptiles, and Small Pets.
+2. Trending This Week: Showcase of popular and best-selling items with ratings and pricing.
+3. Collections for Kittens & Adults: Dedicated sections filtering products based on pet age and needs.
+4. Brand Showcase: Highlighting top natural pet food and supply brands.
+5. FAQ & Support: Quick answers to common shopping questions and customer support info.
+6. Responsive Design: Fully optimized for mobile phones, tablets, and desktop screens.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ Tech Stack : 
+ 1. Frontend: React, Vite
+ 2. Styling: Tailwind CSS, Bootstrap
+ 3. Icons & UI Components: Flowbite-React, Shadcn
+ 4. Deployment: Vercel

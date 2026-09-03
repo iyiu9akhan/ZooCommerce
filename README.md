@@ -19,8 +19,8 @@ Tech Stack :
  3. Icons & UI Components: Flowbite-React, Shadcn
  4. Deployment: Vercel
 
-Run Locally :
- Step-1 : git clone https://github.com/iyiu9akhan/ZooCommerce.git
- step-2 : cd ZooCommerce
- step-3 : npm install
- step-4 : npm run dev
+Run Locally (follow step by step) : 
+ 1. git clone https://github.com/iyiu9akhan/ZooCommerce.git
+ 2. cd ZooCommerce
+ 3. npm install
+ 4. npm run dev
